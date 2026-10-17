@@ -40,7 +40,7 @@ Java 17, Gradle 8.9, Android Gradle Plugin 8.7.3, Kotlin 2.0.21, Android SDK 35 
 
 ## Emülatör ve teslim kanıtları
 
-**Actions → Build Android APK → Run workflow → run_emulator: true** ile buluttaki Android emülatörü çalıştırılabilir. İş akışı JSON veri ve gerçek WebView arama/vegan filtresi testlerini çalıştırıp **Android-emulator-evidence** çıktısına gerçek emülatör ekran görüntüsünü ekler. Bu bir tarayıcı içinde etkileşimli emülatör değildir.
+Her `main` gönderiminde APK derlemesinin ardından Android 15 emülatör testleri de çalışır. Ayrıca **Actions → Build Android APK → Run workflow → run_emulator: true** ile tekrar başlatılabilir. İş akışı JSON veri ve gerçek WebView arama/vegan filtresi testlerini çalıştırıp **Android-emulator-evidence** çıktısına gerçek emülatör ekran görüntüsünü ekler. Bu bir tarayıcı içinde etkileşimli emülatör değildir.
 
 Hocanın tarayıcı içinde etkileşimli emülatör şartı için APK'yı [Appetize](https://appetize.io/) hesabına yükleyip Android oturumunda çalıştırın. Kullanım/hesap koşullarını hizmetten kontrol edin. Çalışan uygulamanın ekran görüntüsünü alın; hesap ve dış hizmete yükleme işlemi kullanıcı tarafından yapılmalıdır. API anahtarı projede gerekmez.
 
