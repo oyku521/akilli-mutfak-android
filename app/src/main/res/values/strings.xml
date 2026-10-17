@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Akıllı Mutfak</string>
+    <string name="app_subtitle">50 tarif · Çevrimdışı hazır</string>
+    <string name="web_content">Tarif asistanı</string>
+    <string name="open_website">Web sitesini aç</string>
+    <string name="open_error">Bağlantıyı açacak bir tarayıcı bulunamadı.</string>
+</resources>

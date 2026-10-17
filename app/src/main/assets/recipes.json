@@ -1,0 +1,752 @@
+[
+  {
+    "name": "Menemen",
+    "category": "Kahvaltı",
+    "calories": 250,
+    "vegan": false,
+    "ingredients": [
+      "Yumurta",
+      "Domates",
+      "Biber"
+    ],
+    "extras": [
+      "tuz",
+      "zeytinyağı"
+    ]
+  },
+  {
+    "name": "Sade Omlet",
+    "category": "Kahvaltı",
+    "calories": 220,
+    "vegan": false,
+    "ingredients": [
+      "Yumurta",
+      "Peynir"
+    ],
+    "extras": [
+      "tuz",
+      "tereyağı"
+    ]
+  },
+  {
+    "name": "Krema Soslu Makarna",
+    "category": "Ana Yemek",
+    "calories": 480,
+    "vegan": false,
+    "ingredients": [
+      "Makarna",
+      "Süt"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Tavuklu Sote",
+    "category": "Ana Yemek",
+    "calories": 320,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Domates",
+      "Biber"
+    ],
+    "extras": [
+      "tuz",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "Peynirli Sandviç",
+    "category": "Atıştırmalık",
+    "calories": 340,
+    "vegan": false,
+    "ingredients": [
+      "Peynir",
+      "Domates",
+      "Ekmek"
+    ],
+    "extras": [
+      "tereyağı"
+    ]
+  },
+  {
+    "name": "Domates Çorbası",
+    "category": "Çorba",
+    "calories": 150,
+    "vegan": false,
+    "ingredients": [
+      "Domates",
+      "Un",
+      "Süt"
+    ],
+    "extras": [
+      "tuz",
+      "tereyağı"
+    ]
+  },
+  {
+    "name": "Napoliten Makarna",
+    "category": "Ana Yemek",
+    "calories": 380,
+    "vegan": true,
+    "ingredients": [
+      "Makarna",
+      "Domates",
+      "Sarımsak"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Peynirli Makarna",
+    "category": "Ana Yemek",
+    "calories": 450,
+    "vegan": false,
+    "ingredients": [
+      "Makarna",
+      "Peynir",
+      "Süt"
+    ],
+    "extras": [
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Krep",
+    "category": "Tatlı",
+    "calories": 280,
+    "vegan": false,
+    "ingredients": [
+      "Yumurta",
+      "Un",
+      "Süt"
+    ],
+    "extras": [
+      "şeker",
+      "tereyağı"
+    ]
+  },
+  {
+    "name": "Çoban Salata",
+    "category": "Salata",
+    "calories": 80,
+    "vegan": true,
+    "ingredients": [
+      "Domates",
+      "Biber",
+      "Salatalık",
+      "Soğan"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "limon suyu",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Peynirli Poğaça",
+    "category": "Hamur İşi",
+    "calories": 350,
+    "vegan": false,
+    "ingredients": [
+      "Un",
+      "Peynir",
+      "Yumurta",
+      "Süt"
+    ],
+    "extras": [
+      "kabartma tozu",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "Tavuklu Makarna",
+    "category": "Ana Yemek",
+    "calories": 420,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Makarna",
+      "Süt"
+    ],
+    "extras": [
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Mercimek Çorbası",
+    "category": "Çorba",
+    "calories": 180,
+    "vegan": true,
+    "ingredients": [
+      "Mercimek",
+      "Soğan",
+      "Havuç",
+      "Patates"
+    ],
+    "extras": [
+      "tuz",
+      "zeytinyağı"
+    ]
+  },
+  {
+    "name": "Nohut Yemeği",
+    "category": "Ana Yemek",
+    "calories": 290,
+    "vegan": true,
+    "ingredients": [
+      "Nohut",
+      "Soğan",
+      "Domates"
+    ],
+    "extras": [
+      "tuz",
+      "zeytinyağı"
+    ]
+  },
+  {
+    "name": "Patates Kızartması",
+    "category": "Garnitür",
+    "calories": 310,
+    "vegan": true,
+    "ingredients": [
+      "Patates"
+    ],
+    "extras": [
+      "sıvı yağ",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Fırında Patates",
+    "category": "Garnitür",
+    "calories": 220,
+    "vegan": true,
+    "ingredients": [
+      "Patates",
+      "Sarımsak"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "kekik",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Patates Püresi",
+    "category": "Garnitür",
+    "calories": 180,
+    "vegan": false,
+    "ingredients": [
+      "Patates",
+      "Süt"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Patatesli Omlet",
+    "category": "Kahvaltı",
+    "calories": 330,
+    "vegan": false,
+    "ingredients": [
+      "Patates",
+      "Yumurta",
+      "Soğan"
+    ],
+    "extras": [
+      "sıvı yağ",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Sebzeli Pilav",
+    "category": "Ana Yemek",
+    "calories": 260,
+    "vegan": false,
+    "ingredients": [
+      "Pirinç",
+      "Havuç",
+      "Biber"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Sade Pirinç Pilavı",
+    "category": "Garnitür",
+    "calories": 230,
+    "vegan": false,
+    "ingredients": [
+      "Pirinç"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Domatesli Pilav",
+    "category": "Ana Yemek",
+    "calories": 250,
+    "vegan": false,
+    "ingredients": [
+      "Pirinç",
+      "Domates"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Tavuklu Pilav",
+    "category": "Ana Yemek",
+    "calories": 380,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Pirinç"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Sütlaç",
+    "category": "Tatlı",
+    "calories": 220,
+    "vegan": false,
+    "ingredients": [
+      "Pirinç",
+      "Süt"
+    ],
+    "extras": [
+      "şeker",
+      "vanilin"
+    ]
+  },
+  {
+    "name": "Kıymalı Makarna",
+    "category": "Ana Yemek",
+    "calories": 440,
+    "vegan": false,
+    "ingredients": [
+      "Makarna",
+      "Kıyma",
+      "Domates"
+    ],
+    "extras": [
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Kıymalı Patates Yemeği",
+    "category": "Ana Yemek",
+    "calories": 360,
+    "vegan": false,
+    "ingredients": [
+      "Kıyma",
+      "Patates",
+      "Soğan"
+    ],
+    "extras": [
+      "tuz",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "Karnıyarık",
+    "category": "Ana Yemek",
+    "calories": 410,
+    "vegan": false,
+    "ingredients": [
+      "Patlıcan",
+      "Kıyma",
+      "Domates",
+      "Soğan"
+    ],
+    "extras": [
+      "tuz",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "Patlıcan Musakka",
+    "category": "Ana Yemek",
+    "calories": 350,
+    "vegan": false,
+    "ingredients": [
+      "Patlıcan",
+      "Kıyma",
+      "Domates",
+      "Biber"
+    ],
+    "extras": [
+      "tuz",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "İmam Bayıldı",
+    "category": "Ana Yemek",
+    "calories": 190,
+    "vegan": true,
+    "ingredients": [
+      "Patlıcan",
+      "Soğan",
+      "Domates",
+      "Sarımsak"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Közlenmiş Patlıcan Salatası",
+    "category": "Salata",
+    "calories": 110,
+    "vegan": true,
+    "ingredients": [
+      "Patlıcan",
+      "Biber",
+      "Limon"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Cacık",
+    "category": "Meze",
+    "calories": 90,
+    "vegan": false,
+    "ingredients": [
+      "Yoğurt",
+      "Salatalık",
+      "Sarımsak"
+    ],
+    "extras": [
+      "nane",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Yoğurtlu Makarna",
+    "category": "Ana Yemek",
+    "calories": 360,
+    "vegan": false,
+    "ingredients": [
+      "Makarna",
+      "Yoğurt",
+      "Sarımsak"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Yayla Çorbası",
+    "category": "Çorba",
+    "calories": 160,
+    "vegan": false,
+    "ingredients": [
+      "Yoğurt",
+      "Un",
+      "Yumurta"
+    ],
+    "extras": [
+      "nane",
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Mantarlı Omlet",
+    "category": "Kahvaltı",
+    "calories": 240,
+    "vegan": false,
+    "ingredients": [
+      "Mantar",
+      "Yumurta"
+    ],
+    "extras": [
+      "tuz",
+      "tereyağı"
+    ]
+  },
+  {
+    "name": "Mantar Sote",
+    "category": "Garnitür",
+    "calories": 120,
+    "vegan": true,
+    "ingredients": [
+      "Mantar",
+      "Soğan",
+      "Sarımsak"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Mantarlı Tavuk",
+    "category": "Ana Yemek",
+    "calories": 330,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Mantar",
+      "Süt"
+    ],
+    "extras": [
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Kabak Mücver",
+    "category": "Meze",
+    "calories": 260,
+    "vegan": false,
+    "ingredients": [
+      "Kabak",
+      "Yumurta",
+      "Un",
+      "Peynir"
+    ],
+    "extras": [
+      "dereotu",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "Kabak Yemeği",
+    "category": "Ana Yemek",
+    "calories": 110,
+    "vegan": true,
+    "ingredients": [
+      "Kabak",
+      "Domates",
+      "Soğan"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Ispanaklı Yumurta",
+    "category": "Kahvaltı",
+    "calories": 190,
+    "vegan": false,
+    "ingredients": [
+      "Ispanak",
+      "Yumurta"
+    ],
+    "extras": [
+      "tuz",
+      "sıvı yağ"
+    ]
+  },
+  {
+    "name": "Ispanaklı Makarna",
+    "category": "Ana Yemek",
+    "calories": 340,
+    "vegan": true,
+    "ingredients": [
+      "Ispanak",
+      "Makarna",
+      "Sarımsak"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Ispanak Yemeği",
+    "category": "Ana Yemek",
+    "calories": 120,
+    "vegan": true,
+    "ingredients": [
+      "Ispanak",
+      "Soğan",
+      "Domates"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Havuç Çorbası",
+    "category": "Çorba",
+    "calories": 140,
+    "vegan": true,
+    "ingredients": [
+      "Havuç",
+      "Patates",
+      "Soğan"
+    ],
+    "extras": [
+      "tuz",
+      "zeytinyağı"
+    ]
+  },
+  {
+    "name": "Tavuk Izgara",
+    "category": "Ana Yemek",
+    "calories": 280,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Limon",
+      "Sarımsak"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Tavuk Çorbası",
+    "category": "Çorba",
+    "calories": 210,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Havuç",
+      "Patates"
+    ],
+    "extras": [
+      "tuz",
+      "karabiber"
+    ]
+  },
+  {
+    "name": "Fırında Tavuk Patates",
+    "category": "Ana Yemek",
+    "calories": 390,
+    "vegan": false,
+    "ingredients": [
+      "Tavuk",
+      "Patates",
+      "Soğan"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz",
+      "kekik"
+    ]
+  },
+  {
+    "name": "Nohutlu Pilav",
+    "category": "Ana Yemek",
+    "calories": 320,
+    "vegan": false,
+    "ingredients": [
+      "Nohut",
+      "Pirinç"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Humus",
+    "category": "Meze",
+    "calories": 180,
+    "vegan": true,
+    "ingredients": [
+      "Nohut",
+      "Limon",
+      "Sarımsak"
+    ],
+    "extras": [
+      "tahin",
+      "zeytinyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Nohut Salatası",
+    "category": "Salata",
+    "calories": 200,
+    "vegan": true,
+    "ingredients": [
+      "Nohut",
+      "Domates",
+      "Salatalık",
+      "Soğan"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "limon suyu",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Peynirli Tost",
+    "category": "Atıştırmalık",
+    "calories": 300,
+    "vegan": false,
+    "ingredients": [
+      "Ekmek",
+      "Peynir"
+    ],
+    "extras": [
+      "tereyağı"
+    ]
+  },
+  {
+    "name": "Yumurtalı Ekmek",
+    "category": "Kahvaltı",
+    "calories": 260,
+    "vegan": false,
+    "ingredients": [
+      "Ekmek",
+      "Yumurta",
+      "Süt"
+    ],
+    "extras": [
+      "tereyağı",
+      "tuz"
+    ]
+  },
+  {
+    "name": "Mercimek Salatası",
+    "category": "Salata",
+    "calories": 180,
+    "vegan": true,
+    "ingredients": [
+      "Mercimek",
+      "Soğan",
+      "Domates",
+      "Limon"
+    ],
+    "extras": [
+      "zeytinyağı",
+      "tuz"
+    ]
+  }
+]
