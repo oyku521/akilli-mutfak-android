@@ -16,7 +16,7 @@ jobs:
         with:
           name: Android-emulator-evidence
           path: reports
-          run-id: 40087353080
+          run-id: 40088134035
           github-token: ${{ github.token }}
       - name: Read test results into an isolated diagnostic branch
         env:
@@ -25,7 +25,7 @@ jobs:
           python3 - <<'PY'
           import os,json,base64,urllib.request,xml.etree.ElementTree as ET
           from pathlib import Path
-          result={'source_run':'40087353080','files':[], 'test_reports':[]}
+          result={'source_run':'40088134035','files':[], 'test_reports':[]}
           for path in Path('reports').rglob('*'):
               if path.is_file(): result['files'].append(str(path))
               if path.is_file() and path.name.startswith('TEST-') and path.suffix=='.xml':
@@ -42,5 +42,9 @@ jobs:
               with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
           api('git/refs',{'ref':'refs/heads/'+branch,'sha':os.environ['GITHUB_SHA']})
           api('contents/emulator-diagnostic.json',{'message':'Record emulator test diagnostics','branch':branch,'content':base64.b64encode(json.dumps(result,ensure_ascii=False,indent=2).encode()).decode()})
-          print('Diagnostic report saved on branch: '+branch)
+          for name in ['live-website.png','offline-80-recipes.png']:
+              image=Path('reports/emulator-evidence')/name
+              assert image.exists(),name+' missing from successful emulator evidence'
+              api('contents/'+name,{'message':'Save verified Android emulator screenshot','branch':branch,'content':base64.b64encode(image.read_bytes()).decode()})
+          print('Diagnostic report and verified screenshots saved on branch: '+branch)
           PY
