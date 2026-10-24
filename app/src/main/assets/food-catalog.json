@@ -1,0 +1,480 @@
+{
+  "egg": {
+    "en": "Egg",
+    "tr": "Yumurta",
+    "protein": 13.0,
+    "carbs": 1.1,
+    "fat": 10.0,
+    "allergens": [
+      "eggs"
+    ]
+  },
+  "milk": {
+    "en": "Milk",
+    "tr": "Süt",
+    "protein": 3.4,
+    "carbs": 4.8,
+    "fat": 3.6,
+    "allergens": [
+      "milk"
+    ]
+  },
+  "yogurt": {
+    "en": "Plain yogurt",
+    "tr": "Sade yoğurt",
+    "protein": 4.0,
+    "carbs": 5.0,
+    "fat": 3.0,
+    "allergens": [
+      "milk"
+    ]
+  },
+  "feta": {
+    "en": "Feta cheese",
+    "tr": "Beyaz peynir",
+    "protein": 14.0,
+    "carbs": 4.0,
+    "fat": 21.0,
+    "allergens": [
+      "milk"
+    ]
+  },
+  "chicken": {
+    "en": "Raw chicken breast",
+    "tr": "Çiğ tavuk göğsü",
+    "protein": 23.0,
+    "carbs": 0.0,
+    "fat": 2.5,
+    "allergens": []
+  },
+  "beef": {
+    "en": "Raw lean ground beef",
+    "tr": "Çiğ az yağlı kıyma",
+    "protein": 21.0,
+    "carbs": 0.0,
+    "fat": 10.0,
+    "allergens": []
+  },
+  "salmon": {
+    "en": "Raw salmon",
+    "tr": "Çiğ somon",
+    "protein": 20.0,
+    "carbs": 0.0,
+    "fat": 13.0,
+    "allergens": [
+      "fish"
+    ]
+  },
+  "tuna": {
+    "en": "Drained canned tuna",
+    "tr": "Süzülmüş konserve ton balığı",
+    "protein": 25.0,
+    "carbs": 0.0,
+    "fat": 1.0,
+    "allergens": [
+      "fish"
+    ]
+  },
+  "chickpeas": {
+    "en": "Cooked chickpeas",
+    "tr": "Haşlanmış nohut",
+    "protein": 8.9,
+    "carbs": 27.4,
+    "fat": 2.6,
+    "allergens": []
+  },
+  "lentils": {
+    "en": "Cooked lentils",
+    "tr": "Haşlanmış mercimek",
+    "protein": 9.0,
+    "carbs": 20.0,
+    "fat": 0.4,
+    "allergens": []
+  },
+  "beans": {
+    "en": "Cooked white beans",
+    "tr": "Haşlanmış kuru fasulye",
+    "protein": 8.0,
+    "carbs": 25.0,
+    "fat": 0.6,
+    "allergens": []
+  },
+  "quinoa": {
+    "en": "Cooked quinoa",
+    "tr": "Pişmiş kinoa",
+    "protein": 4.4,
+    "carbs": 21.3,
+    "fat": 1.9,
+    "allergens": []
+  },
+  "rice": {
+    "en": "Cooked white rice",
+    "tr": "Pişmiş beyaz pirinç",
+    "protein": 2.7,
+    "carbs": 28.0,
+    "fat": 0.3,
+    "allergens": []
+  },
+  "brownRice": {
+    "en": "Cooked brown rice",
+    "tr": "Pişmiş esmer pirinç",
+    "protein": 2.6,
+    "carbs": 23.0,
+    "fat": 0.9,
+    "allergens": []
+  },
+  "buckwheat": {
+    "en": "Cooked buckwheat",
+    "tr": "Pişmiş karabuğday",
+    "protein": 3.4,
+    "carbs": 20.0,
+    "fat": 0.6,
+    "allergens": []
+  },
+  "pasta": {
+    "en": "Dry wheat pasta",
+    "tr": "Kuru buğday makarnası",
+    "protein": 13.0,
+    "carbs": 72.0,
+    "fat": 1.5,
+    "allergens": [
+      "gluten"
+    ]
+  },
+  "bread": {
+    "en": "Wheat bread",
+    "tr": "Buğday ekmeği",
+    "protein": 9.0,
+    "carbs": 49.0,
+    "fat": 3.2,
+    "allergens": [
+      "gluten"
+    ]
+  },
+  "flour": {
+    "en": "Wheat flour",
+    "tr": "Buğday unu",
+    "protein": 10.0,
+    "carbs": 76.0,
+    "fat": 1.0,
+    "allergens": [
+      "gluten"
+    ]
+  },
+  "gfPasta": {
+    "en": "Certified GF dry pasta",
+    "tr": "Sertifikalı glutensiz kuru makarna",
+    "protein": 7.0,
+    "carbs": 78.0,
+    "fat": 1.0,
+    "allergens": []
+  },
+  "riceFlour": {
+    "en": "Certified GF rice flour",
+    "tr": "Sertifikalı glutensiz pirinç unu",
+    "protein": 6.0,
+    "carbs": 80.0,
+    "fat": 1.4,
+    "allergens": []
+  },
+  "cornFlour": {
+    "en": "Certified GF corn flour",
+    "tr": "Sertifikalı glutensiz mısır unu",
+    "protein": 7.0,
+    "carbs": 76.0,
+    "fat": 3.9,
+    "allergens": []
+  },
+  "gfOats": {
+    "en": "Certified GF rolled oats",
+    "tr": "Sertifikalı glutensiz yulaf ezmesi",
+    "protein": 13.0,
+    "carbs": 68.0,
+    "fat": 7.0,
+    "allergens": []
+  },
+  "potato": {
+    "en": "Raw potato",
+    "tr": "Çiğ patates",
+    "protein": 2.0,
+    "carbs": 17.0,
+    "fat": 0.1,
+    "allergens": []
+  },
+  "sweetPotato": {
+    "en": "Raw sweet potato",
+    "tr": "Çiğ tatlı patates",
+    "protein": 1.6,
+    "carbs": 20.0,
+    "fat": 0.1,
+    "allergens": []
+  },
+  "tomato": {
+    "en": "Tomato",
+    "tr": "Domates",
+    "protein": 0.9,
+    "carbs": 3.9,
+    "fat": 0.2,
+    "allergens": []
+  },
+  "pepper": {
+    "en": "Sweet pepper",
+    "tr": "Tatlı biber",
+    "protein": 1.0,
+    "carbs": 6.0,
+    "fat": 0.3,
+    "allergens": []
+  },
+  "onion": {
+    "en": "Onion",
+    "tr": "Soğan",
+    "protein": 1.1,
+    "carbs": 9.0,
+    "fat": 0.1,
+    "allergens": []
+  },
+  "garlic": {
+    "en": "Garlic",
+    "tr": "Sarımsak",
+    "protein": 6.0,
+    "carbs": 33.0,
+    "fat": 0.5,
+    "allergens": []
+  },
+  "carrot": {
+    "en": "Carrot",
+    "tr": "Havuç",
+    "protein": 0.9,
+    "carbs": 10.0,
+    "fat": 0.2,
+    "allergens": []
+  },
+  "zucchini": {
+    "en": "Zucchini",
+    "tr": "Kabak",
+    "protein": 1.2,
+    "carbs": 3.1,
+    "fat": 0.3,
+    "allergens": []
+  },
+  "eggplant": {
+    "en": "Eggplant",
+    "tr": "Patlıcan",
+    "protein": 1.0,
+    "carbs": 6.0,
+    "fat": 0.2,
+    "allergens": []
+  },
+  "spinach": {
+    "en": "Spinach",
+    "tr": "Ispanak",
+    "protein": 2.9,
+    "carbs": 3.6,
+    "fat": 0.4,
+    "allergens": []
+  },
+  "mushroom": {
+    "en": "Mushroom",
+    "tr": "Mantar",
+    "protein": 3.1,
+    "carbs": 3.3,
+    "fat": 0.3,
+    "allergens": []
+  },
+  "broccoli": {
+    "en": "Broccoli",
+    "tr": "Brokoli",
+    "protein": 2.8,
+    "carbs": 7.0,
+    "fat": 0.4,
+    "allergens": []
+  },
+  "cucumber": {
+    "en": "Cucumber",
+    "tr": "Salatalık",
+    "protein": 0.7,
+    "carbs": 3.6,
+    "fat": 0.1,
+    "allergens": []
+  },
+  "lettuce": {
+    "en": "Lettuce",
+    "tr": "Marul",
+    "protein": 1.4,
+    "carbs": 2.9,
+    "fat": 0.2,
+    "allergens": []
+  },
+  "avocado": {
+    "en": "Avocado flesh",
+    "tr": "Avokado içi",
+    "protein": 2.0,
+    "carbs": 8.5,
+    "fat": 15.0,
+    "allergens": []
+  },
+  "lemon": {
+    "en": "Lemon juice",
+    "tr": "Limon suyu",
+    "protein": 0.4,
+    "carbs": 7.0,
+    "fat": 0.2,
+    "allergens": []
+  },
+  "oliveOil": {
+    "en": "Olive oil",
+    "tr": "Zeytinyağı",
+    "protein": 0.0,
+    "carbs": 0.0,
+    "fat": 100.0,
+    "allergens": []
+  },
+  "butter": {
+    "en": "Butter",
+    "tr": "Tereyağı",
+    "protein": 0.9,
+    "carbs": 0.1,
+    "fat": 81.0,
+    "allergens": [
+      "milk"
+    ]
+  },
+  "tahini": {
+    "en": "Plain tahini",
+    "tr": "Sade tahin",
+    "protein": 17.0,
+    "carbs": 21.0,
+    "fat": 54.0,
+    "allergens": [
+      "sesame"
+    ]
+  },
+  "walnut": {
+    "en": "Walnut kernels",
+    "tr": "Ceviz içi",
+    "protein": 15.0,
+    "carbs": 14.0,
+    "fat": 65.0,
+    "allergens": [
+      "nuts"
+    ]
+  },
+  "almond": {
+    "en": "Almonds",
+    "tr": "Badem",
+    "protein": 21.0,
+    "carbs": 22.0,
+    "fat": 50.0,
+    "allergens": [
+      "nuts"
+    ]
+  },
+  "banana": {
+    "en": "Banana flesh",
+    "tr": "Muz içi",
+    "protein": 1.1,
+    "carbs": 23.0,
+    "fat": 0.3,
+    "allergens": []
+  },
+  "apple": {
+    "en": "Apple",
+    "tr": "Elma",
+    "protein": 0.3,
+    "carbs": 14.0,
+    "fat": 0.2,
+    "allergens": []
+  },
+  "berries": {
+    "en": "Mixed berries",
+    "tr": "Orman meyveleri",
+    "protein": 0.7,
+    "carbs": 12.0,
+    "fat": 0.3,
+    "allergens": []
+  },
+  "chia": {
+    "en": "Chia seeds",
+    "tr": "Chia tohumu",
+    "protein": 17.0,
+    "carbs": 42.0,
+    "fat": 31.0,
+    "allergens": []
+  },
+  "coconutMilk": {
+    "en": "Unsweetened coconut milk",
+    "tr": "Şekersiz Hindistan cevizi sütü",
+    "protein": 2.0,
+    "carbs": 3.0,
+    "fat": 20.0,
+    "allergens": []
+  },
+  "tofu": {
+    "en": "Plain firm tofu",
+    "tr": "Sade sert tofu",
+    "protein": 12.0,
+    "carbs": 2.0,
+    "fat": 7.0,
+    "allergens": [
+      "soy"
+    ]
+  },
+  "cocoa": {
+    "en": "Unsweetened cocoa",
+    "tr": "Şekersiz kakao",
+    "protein": 20.0,
+    "carbs": 58.0,
+    "fat": 14.0,
+    "allergens": []
+  },
+  "honey": {
+    "en": "Honey",
+    "tr": "Bal",
+    "protein": 0.3,
+    "carbs": 82.0,
+    "fat": 0.0,
+    "allergens": []
+  },
+  "sugar": {
+    "en": "Sugar",
+    "tr": "Şeker",
+    "protein": 0.0,
+    "carbs": 100.0,
+    "fat": 0.0,
+    "allergens": []
+  },
+  "parsley": {
+    "en": "Parsley",
+    "tr": "Maydanoz",
+    "protein": 3.0,
+    "carbs": 6.0,
+    "fat": 0.8,
+    "allergens": []
+  },
+  "pumpkin": {
+    "en": "Pumpkin",
+    "tr": "Bal kabağı",
+    "protein": 1.0,
+    "carbs": 7.0,
+    "fat": 0.1,
+    "allergens": []
+  },
+  "peas": {
+    "en": "Cooked peas",
+    "tr": "Haşlanmış bezelye",
+    "protein": 5.4,
+    "carbs": 15.0,
+    "fat": 0.4,
+    "allergens": []
+  },
+  "fish": {
+    "en": "Raw white fish",
+    "tr": "Çiğ beyaz etli balık",
+    "protein": 20.0,
+    "carbs": 0.0,
+    "fat": 2.0,
+    "allergens": [
+      "fish"
+    ]
+  }
+}

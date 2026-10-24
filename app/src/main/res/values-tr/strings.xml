@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Akıllı Mutfak</string>
+    <string name="web_content">İki dilli tarif asistanı</string>
+    <string name="loading_live">Canlı siteye bağlanıyor…</string>
+    <string name="loading_bundled">Kayıtlı tarifler açılıyor…</string>
+    <string name="mode_live">Canlı site · güncel içerik</string>
+    <string name="mode_bundled">Çevrimdışı kopya · 80 tarif</string>
+    <string name="live_button">↻ Canlı</string>
+    <string name="live_description">Canlı web sitesini yenile</string>
+    <string name="offline_button">Çevrimdışı</string>
+    <string name="offline_description">Uygulamadaki kayıtlı 80 tarifi aç</string>
+    <string name="load_error">Tarifler yüklenemedi. Canlı veya Çevrimdışı düğmesini tekrar dene.</string>
+    <string name="open_error">Bağlantıyı açacak bir tarayıcı bulunamadı.</string>
+</resources>
