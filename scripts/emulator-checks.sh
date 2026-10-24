@@ -62,7 +62,18 @@ wait_mode() {
     adb shell rm -f /sdcard/kitchen-window.xml
     if adb shell uiautomator dump /sdcard/kitchen-window.xml >/dev/null &&
        adb pull /sdcard/kitchen-window.xml "$evidence_dir/window.xml" >/dev/null; then
-    if python3 - "$evidence_dir/window.xml" "$expected" <<'PY'
+      # Only recover the emulator's known launcher ANR; app failures still fail.
+      if python3 - "$evidence_dir/window.xml" <<'PYLAUNCHER'
+import sys,xml.etree.ElementTree as ET
+root=ET.parse(sys.argv[1]).getroot()
+text=' '.join(node.get('text','') for node in root.iter())
+sys.exit(0 if "Pixel Launcher isn't responding" in text else 1)
+PYLAUNCHER
+      then
+        echo "Recovering emulator Pixel Launcher ANR before screenshot"
+        adb shell am force-stop com.google.android.apps.nexuslauncher
+        adb shell am start -W -n com.oyku.akillimutfak/com.student.recipes.MainActivity
+      elif python3 - "$evidence_dir/window.xml" "$expected" <<'PY'
 import sys,xml.etree.ElementTree as ET
 root=ET.parse(sys.argv[1]).getroot()
 text=' '.join(node.get('text','') for node in root.iter())
