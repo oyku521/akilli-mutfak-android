@@ -9,6 +9,7 @@ on:
       - '*.gradle.kts'
       - 'gradle.properties'
       - 'gradlew*'
+      - 'scripts/**'
       - '.github/workflows/build.yml'
   workflow_dispatch:
     inputs:
@@ -61,7 +62,9 @@ jobs:
               names = apk.namelist()
               assert 'AndroidManifest.xml' in names
               assert any(n.startswith('classes') and n.endswith('.dex') for n in names)
-              assert len(json.loads(apk.read('assets/recipes.json'))) == 50
+              assert len(json.loads(apk.read('assets/recipes.json'))) == 80
+              assert len(json.loads(apk.read('assets/food-catalog.json'))) > 0
+              assert 'assets/images/hero.svg' in names
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -120,17 +123,14 @@ jobs:
           profile: pixel_2
           disable-animations: true
           script: |
-            cd '${{ steps.project.outputs.path }}' && chmod +x gradlew && ./gradlew --no-daemon --max-workers=2 connectedDebugAndroidTest
-            adb install -r "$GITHUB_WORKSPACE/apk-for-emulator/app-debug.apk"
-            adb shell am start -W -n com.oyku.akillimutfak/com.student.recipes.MainActivity
-            sleep 5
-            adb shell screencap -p /sdcard/akilli-mutfak.png
-            adb pull /sdcard/akilli-mutfak.png emulator-screenshot.png
+            cd '${{ steps.project.outputs.path }}' && bash scripts/emulator-checks.sh "$GITHUB_WORKSPACE/apk-for-emulator/app-debug.apk" "$GITHUB_WORKSPACE/emulator-evidence"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: Android-emulator-evidence
           path: |
             emulator-screenshot.png
+            emulator-evidence/**
             **/app/build/reports/androidTests/connected/**
+            **/app/build/outputs/androidTest-results/connected/**
           if-no-files-found: ignore

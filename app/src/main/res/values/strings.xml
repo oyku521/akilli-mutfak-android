@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">Akıllı Mutfak</string>
-    <string name="app_subtitle">50 tarif · Çevrimdışı hazır</string>
-    <string name="web_content">Tarif asistanı</string>
-    <string name="open_website">Web sitesini aç</string>
-    <string name="open_error">Bağlantıyı açacak bir tarayıcı bulunamadı.</string>
+    <string name="app_name">Smart Kitchen</string>
+    <string name="web_content">Bilingual recipe assistant</string>
+    <string name="loading_live">Connecting to live website…</string>
+    <string name="loading_bundled">Opening saved recipes…</string>
+    <string name="mode_live">Live website · latest content</string>
+    <string name="mode_bundled">Offline snapshot · 80 recipes</string>
+    <string name="live_button">↻ Live</string>
+    <string name="live_description">Refresh the live website</string>
+    <string name="offline_button">Offline</string>
+    <string name="offline_description">Open 80 recipes saved in this app</string>
+    <string name="load_error">Could not load recipes. Try Live or Offline again.</string>
+    <string name="open_error">No browser is available to open this link.</string>
 </resources>
