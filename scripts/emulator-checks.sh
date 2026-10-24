@@ -18,6 +18,25 @@ save_reports() {
   if [ -d app/build/outputs/androidTest-results/connected ]; then
     cp -R app/build/outputs/androidTest-results/connected "$evidence_dir/$label/results"
   fi
+  python3 - "$evidence_dir/$label" "$label" <<'PYREPORT'
+import os,sys,xml.etree.ElementTree as ET
+from pathlib import Path
+files=list(Path(sys.argv[1]).glob('results/**/TEST-*.xml'))
+suites=[ET.parse(file).getroot() for file in files]
+count=sum(int(s.get('tests','0')) for s in suites)
+failures=sum(int(s.get('failures','0')) + int(s.get('errors','0')) for s in suites)
+lines=[f"### {sys.argv[2]}",f"Executed tests: {count}; failures/errors: {failures}"]
+for suite in suites:
+ for case in suite.iter('testcase'):
+  for failure in list(case.findall('failure'))+list(case.findall('error')):
+   lines += [f"#### {case.get('name','test')}","```text",failure.text or failure.get('message','Failure'),"```"]
+summary=os.environ.get('GITHUB_STEP_SUMMARY')
+if summary:
+ with open(summary,'a') as out:out.write('\n'.join(lines)+'\n')
+print('\n'.join(lines))
+if count == 0:
+ raise SystemExit('No executed instrumentation tests found in current XML results')
+PYREPORT
 }
 
 wait_mode() {
