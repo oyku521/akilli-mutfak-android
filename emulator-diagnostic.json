@@ -1,0 +1,84 @@
+{
+  "source_run": "40099114285",
+  "files": [
+    "reports/emulator-evidence/online-tests/html/debug/index.html",
+    "reports/emulator-evidence/online-tests/html/debug/com.student.recipes.html",
+    "reports/emulator-evidence/online-tests/html/debug/com.student.recipes.RecipeAppTest.html",
+    "reports/emulator-evidence/online-tests/html/debug/js/report.js",
+    "reports/emulator-evidence/online-tests/html/debug/css/base-style.css",
+    "reports/emulator-evidence/online-tests/html/debug/css/style.css",
+    "reports/emulator-evidence/online-tests/results/debug/test-result.pb",
+    "reports/emulator-evidence/online-tests/results/debug/TEST-emulator-5554 - 15-_app-.xml",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/cpuinfo",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/aapt.2.ok.txt",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/utp.0.log.lck",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/test-result.textproto",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-liveWebsiteLoadsInsideTheApp.txt",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/meminfo",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/test-result.pb",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-internalNavigationIsRestrictedToOwnedHttpsLocations.txt",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/utp.0.log",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/aapt.1.ok.txt",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/device-info.pb",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-bundledRecipesAreComplete.txt",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-bundledSearchDietaryFilterAndLanguageWork.txt",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/profiling/emulator-5554_profile.pb",
+    "reports/emulator-evidence/online-tests/results/debug/emulator-5554 - 15/testlog/test-results.log",
+    "reports/app/build/reports/androidTests/connected/debug/index.html",
+    "reports/app/build/reports/androidTests/connected/debug/com.student.recipes.html",
+    "reports/app/build/reports/androidTests/connected/debug/com.student.recipes.RecipeAppTest.html",
+    "reports/app/build/reports/androidTests/connected/debug/js/report.js",
+    "reports/app/build/reports/androidTests/connected/debug/css/base-style.css",
+    "reports/app/build/reports/androidTests/connected/debug/css/style.css",
+    "reports/app/build/outputs/androidTest-results/connected/debug/test-result.pb",
+    "reports/app/build/outputs/androidTest-results/connected/debug/TEST-emulator-5554 - 15-_app-.xml",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/cpuinfo",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/aapt.2.ok.txt",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/utp.0.log.lck",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/test-result.textproto",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-liveWebsiteLoadsInsideTheApp.txt",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/meminfo",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/test-result.pb",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-internalNavigationIsRestrictedToOwnedHttpsLocations.txt",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/utp.0.log",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/aapt.1.ok.txt",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/device-info.pb",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-bundledRecipesAreComplete.txt",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/logcat-com.student.recipes.RecipeAppTest-bundledSearchDietaryFilterAndLanguageWork.txt",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/profiling/emulator-5554_profile.pb",
+    "reports/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 15/testlog/test-results.log"
+  ],
+  "test_reports": [
+    {
+      "path": "reports/emulator-evidence/online-tests/results/debug/TEST-emulator-5554 - 15-_app-.xml",
+      "attributes": {
+        "name": "com.student.recipes.RecipeAppTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "15.838",
+        "timestamp": "2026-10-24T13:44:02",
+        "hostname": "localhost"
+      },
+      "failures": []
+    },
+    {
+      "path": "reports/app/build/outputs/androidTest-results/connected/debug/TEST-emulator-5554 - 15-_app-.xml",
+      "attributes": {
+        "name": "com.student.recipes.RecipeAppTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "15.838",
+        "timestamp": "2026-10-24T13:44:02",
+        "hostname": "localhost"
+      },
+      "failures": []
+    }
+  ],
+  "emulator_step_tail": {
+    "emulator/9_Test on Android emulator.txt": "2026-10-24T13:43:22.2370840Z > Task :app:javaPreCompileDebug\n2026-10-24T13:43:22.4326102Z > Task :app:preDebugAndroidTestBuild SKIPPED\n2026-10-24T13:43:22.5361372Z > Task :app:checkDebugAndroidTestAarMetadata\n2026-10-24T13:43:22.5417211Z > Task :app:generateDebugAndroidTestResValues\n2026-10-24T13:43:22.5457301Z > Task :app:mapDebugAndroidTestSourceSetPaths\n2026-10-24T13:43:22.5480592Z > Task :app:generateDebugAndroidTestResources\n2026-10-24T13:43:22.6359747Z > Task :app:mergeDebugAndroidTestResources\n2026-10-24T13:43:22.7360633Z > Task :app:processDebugAndroidTestManifest\n2026-10-24T13:43:22.8349739Z > Task :app:processDebugResources\n2026-10-24T13:43:22.9350424Z > Task :app:processDebugAndroidTestResources\n2026-10-24T13:43:23.2429905Z > Task :app:javaPreCompileDebugAndroidTest\n2026-10-24T13:43:23.3322792Z > Task :app:mergeDebugShaders\n2026-10-24T13:43:23.3386813Z > Task :app:compileDebugShaders NO-SOURCE\n2026-10-24T13:43:23.3450121Z > Task :app:generateDebugAssets UP-TO-DATE\n2026-10-24T13:43:23.5398269Z > Task :app:mergeDebugAssets\n2026-10-24T13:43:23.8350184Z > Task :app:compressDebugAssets\n2026-10-24T13:43:24.7328151Z > Task :app:desugarDebugFileDependencies\n2026-10-24T13:43:24.8352937Z > Task :app:checkDebugDuplicateClasses\n2026-10-24T13:43:29.2316901Z > Task :app:mergeExtDexDebug\n2026-10-24T13:43:29.3330340Z > Task :app:mergeLibDexDebug\n2026-10-24T13:43:29.3392101Z > Task :app:mergeDebugJniLibFolders\n2026-10-24T13:43:29.3429576Z > Task :app:mergeDebugNativeLibs NO-SOURCE\n2026-10-24T13:43:29.3489662Z > Task :app:stripDebugDebugSymbols NO-SOURCE\n2026-10-24T13:43:30.4318816Z > Task :app:validateSigningDebug\n2026-10-24T13:43:30.4401093Z > Task :app:writeDebugAppMetadata\n2026-10-24T13:43:30.5358438Z > Task :app:writeDebugSigningConfigVersions\n2026-10-24T13:43:30.5389327Z > Task :app:mergeDebugAndroidTestShaders\n2026-10-24T13:43:30.5477303Z > Task :app:compileDebugAndroidTestShaders NO-SOURCE\n2026-10-24T13:43:30.5538121Z > Task :app:generateDebugAndroidTestAssets UP-TO-DATE\n2026-10-24T13:43:30.5549136Z > Task :app:mergeDebugAndroidTestAssets\n2026-10-24T13:43:30.5559222Z > Task :app:compressDebugAndroidTestAssets\n2026-10-24T13:43:30.6319005Z > Task :app:desugarDebugAndroidTestFileDependencies\n2026-10-24T13:43:30.7389901Z > Task :app:checkDebugAndroidTestDuplicateClasses\n2026-10-24T13:43:32.0324745Z > Task :app:mergeExtDexDebugAndroidTest\n2026-10-24T13:43:32.1350763Z > Task :app:mergeLibDexDebugAndroidTest\n2026-10-24T13:43:32.1360731Z > Task :app:mergeDebugAndroidTestJniLibFolders\n2026-10-24T13:43:32.1364517Z > Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE\n2026-10-24T13:43:32.1367855Z > Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE\n2026-10-24T13:43:32.1370732Z > Task :app:validateSigningDebugAndroidTest\n2026-10-24T13:43:32.1373993Z > Task :app:writeDebugAndroidTestSigningConfigVersions\n2026-10-24T13:43:34.1451735Z \n2026-10-24T13:43:34.1622374Z > Task :app:compileDebugKotlin\n2026-10-24T13:43:34.1680251Z w: file:///home/runner/work/akilli-mutfak-android/akilli-mutfak-android/app/src/main/java/com/student/recipes/MainActivity.kt:175:62 'fun onBackPressed(): Unit' is deprecated. Deprecated in Java.\n2026-10-24T13:43:34.2319380Z \n2026-10-24T13:43:34.2343709Z > Task :app:compileDebugJavaWithJavac NO-SOURCE\n2026-10-24T13:43:34.2394740Z > Task :app:bundleDebugClassesToCompileJar\n2026-10-24T13:43:35.1313133Z > Task :app:dexBuilderDebug\n2026-10-24T13:43:35.2324043Z > Task :app:mergeDebugGlobalSynthetics\n2026-10-24T13:43:35.2372287Z > Task :app:processDebugJavaRes\n2026-10-24T13:43:35.6314139Z > Task :app:mergeDebugJavaResource\n2026-10-24T13:43:35.7390229Z > Task :app:mergeProjectDexDebug\n2026-10-24T13:43:36.4311415Z > Task :app:packageDebug\n2026-10-24T13:43:36.4314365Z > Task :app:createDebugApkListingFileRedirect\n2026-10-24T13:43:37.3339129Z > Task :app:compileDebugAndroidTestKotlin\n2026-10-24T13:43:37.3369335Z > Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE\n2026-10-24T13:43:37.6321858Z > Task :app:dexBuilderDebugAndroidTest\n2026-10-24T13:43:37.6349846Z > Task :app:mergeDebugAndroidTestGlobalSynthetics\n2026-10-24T13:43:37.6366000Z > Task :app:processDebugAndroidTestJavaRes\n2026-10-24T13:43:37.7349991Z > Task :app:mergeProjectDexDebugAndroidTest\n2026-10-24T13:43:37.7379665Z > Task :app:mergeDebugAndroidTestJavaResource\n2026-10-24T13:43:37.9312094Z > Task :app:packageDebugAndroidTest\n2026-10-24T13:43:37.9339614Z > Task :app:createDebugAndroidTestApkListingFileRedirect\n2026-10-24T13:43:38.1312597Z [EmulatorConsole]: Failed to start Emulator console for 5554\n2026-10-24T13:43:46.3342266Z \n2026-10-24T13:43:46.3369860Z > Task :app:connectedDebugAndroidTest\n2026-10-24T13:43:46.3380388Z Starting 4 tests on emulator-5554 - 15\n2026-10-24T13:43:56.3315757Z \n2026-10-24T13:43:56.3318600Z emulator-5554 - 15 Tests 1/4 completed. (0 skipped) (0 failed)\n2026-10-24T13:44:02.1309920Z Finished 4 tests on emulator-5554 - 15\n2026-10-24T13:44:03.0327366Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__reactivecircus_android-emulator-runner-1792849391909.json\n2026-10-24T13:44:03.1319147Z \n2026-10-24T13:44:03.1430763Z BUILD SUCCESSFUL in 57s\n2026-10-24T13:44:03.1481321Z 61 actionable tasks: 61 executed\n2026-10-24T13:44:03.5824089Z ### online-tests\n2026-10-24T13:44:03.5824487Z Executed tests: 4; failures/errors: 0\n2026-10-24T13:44:04.2521129Z Performing Streamed Install\n2026-10-24T13:44:04.2521909Z Success\n2026-10-24T13:44:04.3022939Z Starting: Intent { cmp=com.oyku.akillimutfak/com.student.recipes.MainActivity }\n2026-10-24T13:44:05.9652479Z Status: ok\n2026-10-24T13:44:05.9684632Z LaunchState: COLD\n2026-10-24T13:44:05.9709709Z Activity: com.oyku.akillimutfak/com.student.recipes.MainActivity\n2026-10-24T13:44:05.9739711Z TotalTime: 1655\n2026-10-24T13:44:05.9769270Z WaitTime: 1671\n2026-10-24T13:44:05.9800391Z Complete\n2026-10-24T13:44:08.2338079Z ERROR: null root node returned by UiTestAutomationBridge.\n2026-10-24T13:44:09.2370145Z adb: error: failed to stat remote object '/sdcard/kitchen-window.xml': No such file or directory\n2026-10-24T13:44:09.5894537Z ##[error]The process '/usr/bin/sh' failed with exit code 1\n2026-10-24T13:44:09.5903138Z ##[group]Terminate Emulator\n2026-10-24T13:44:09.5903967Z [command]/usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 emu kill\n2026-10-24T13:44:09.5925719Z OK: killing emulator, bye bye\n2026-10-24T13:44:09.5928057Z OK\n2026-10-24T13:44:09.5931172Z ##[endgroup]\n2026-10-24T13:44:09.5940401Z INFO         | Wait for emulator (pid 2713) 20 seconds to shutdown gracefully before kill;you can set environment variable ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL(in seconds) to change the default value (20 seconds)\n2026-10-24T13:44:09.5941852Z \n2026-10-24T13:44:09.6050591Z USER_INFO    | Snapshots have been disabled by the user, save request is ignored.\n2026-10-24T13:44:09.6055470Z INFO         | Saving snapshot 'default_boot' took 0 ms\n2026-10-24T13:44:09.9961068Z ERROR        | stop: Not implemented\n2026-10-24T13:44:09.9961678Z WARNING      | Emulator client has not yet been configured.. Call configure me first!\n2026-10-24T13:44:10.0080435Z INFO         | removeAll\n2026-10-24T13:44:10.0524639Z WARNING      | Netsim Wifi dns:///localhost:46607 is gone due to Stream removed (CANCELLED)"
+  }
+}
