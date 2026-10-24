@@ -35,6 +35,20 @@ internal fun waitForRecipes(scenario: ActivityScenario<MainActivity>, timeout: L
     }
 }
 
+internal fun waitForMode(scenario: ActivityScenario<MainActivity>, live: Boolean) {
+    val deadline = SystemClock.elapsedRealtime() + 40000
+    while (true) {
+        var matches = false
+        scenario.onActivity { activity ->
+            val expected = activity.getString(if (live) R.string.mode_live else R.string.mode_bundled)
+            matches = activity.findViewById<TextView>(R.id.modeStatus).text.toString() == expected
+        }
+        if (matches) return
+        assertTrue("Expected mode did not become ready", SystemClock.elapsedRealtime() < deadline)
+        SystemClock.sleep(200)
+    }
+}
+
 @RunWith(AndroidJUnit4::class)
 class RecipeAppTest {
     @Test fun bundledRecipesAreComplete() {
@@ -74,6 +88,13 @@ class RecipeAppTest {
                 assertTrue("Live mode must show the actual GitHub Pages website", MainActivity.isLiveSite(android.net.Uri.parse(activity.findViewById<WebView>(R.id.recipeWebView).url.orEmpty())))
             }
             assertEquals("true", evaluate(scenario, "navigator.userAgent.includes('SmartKitchenAndroid/') && document.getElementById('installApp').hidden && recipes.length >= 80"))
+            waitForMode(scenario, true)
+            scenario.onActivity { it.showBundled() }
+            waitForMode(scenario, false)
+            scenario.onActivity { it.showLive() }
+            waitForMode(scenario, true)
+            scenario.onActivity { it.findViewById<WebView>(R.id.recipeWebView).goBack() }
+            waitForMode(scenario, false)
         }
     }
 

@@ -82,7 +82,11 @@ class MainActivity : Activity() {
 
             override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {
                 val uri = Uri.parse(url)
-                if ((liveMode && !isLiveSite(uri)) || (!liveMode && !isBundledSite(uri))) return
+                liveMode = when {
+                    isLiveSite(uri) -> true
+                    isBundledSite(uri) -> false
+                    else -> return
+                }
                 val token = ++navigation
                 ready = false
                 mainHandler.removeCallbacksAndMessages(null)
