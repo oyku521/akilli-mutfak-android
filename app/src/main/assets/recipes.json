@@ -32,7 +32,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 0,
+      "row": 0,
+      "crop": [
+        4,
+        4,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r026",
@@ -67,7 +78,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 1,
+      "row": 0,
+      "crop": [
+        388,
+        4,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r039",
@@ -106,7 +128,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 2,
+      "row": 0,
+      "crop": [
+        772,
+        4,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r014",
@@ -141,7 +174,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": false
+    "glutenFree": false,
+    "photo": {
+      "sheet": 1,
+      "column": 3,
+      "row": 0,
+      "crop": [
+        1156,
+        4,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r049",
@@ -172,7 +216,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": false
+    "glutenFree": false,
+    "photo": {
+      "sheet": 1,
+      "column": 0,
+      "row": 1,
+      "crop": [
+        4,
+        248,
+        376,
+        238
+      ]
+    }
   },
   {
     "id": "r077",
@@ -199,7 +254,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 1,
+      "row": 1,
+      "crop": [
+        388,
+        248,
+        376,
+        238
+      ]
+    }
   },
   {
     "id": "r065",
@@ -234,7 +300,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 2,
+      "row": 1,
+      "crop": [
+        772,
+        248,
+        376,
+        238
+      ]
+    }
   },
   {
     "id": "r030",
@@ -265,7 +342,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 3,
+      "row": 1,
+      "crop": [
+        1156,
+        248,
+        376,
+        238
+      ]
+    }
   },
   {
     "id": "r008",
@@ -300,7 +388,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 0,
+      "row": 2,
+      "crop": [
+        4,
+        494,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r002",
@@ -327,7 +426,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 1,
+      "row": 2,
+      "crop": [
+        388,
+        494,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r004",
@@ -358,7 +468,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 2,
+      "row": 2,
+      "crop": [
+        772,
+        494,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r006",
@@ -389,7 +510,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 3,
+      "row": 2,
+      "crop": [
+        1156,
+        494,
+        376,
+        236
+      ]
+    }
   },
   {
     "id": "r007",
@@ -420,7 +552,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 0,
+      "row": 3,
+      "crop": [
+        4,
+        738,
+        376,
+        282
+      ]
+    }
   },
   {
     "id": "r012",
@@ -455,7 +598,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 1,
+      "row": 3,
+      "crop": [
+        388,
+        738,
+        376,
+        282
+      ]
+    }
   },
   {
     "id": "r060",
@@ -482,7 +636,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 2,
+      "row": 3,
+      "crop": [
+        772,
+        738,
+        376,
+        282
+      ]
+    }
   },
   {
     "id": "r013",
@@ -517,7 +682,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 1,
+      "column": 3,
+      "row": 3,
+      "crop": [
+        1156,
+        738,
+        376,
+        282
+      ]
+    }
   },
   {
     "id": "r016",
@@ -548,7 +724,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 0,
+      "row": 0,
+      "crop": [
+        4,
+        4,
+        376,
+        232
+      ]
+    }
   },
   {
     "id": "r017",
@@ -583,7 +770,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 1,
+      "row": 0,
+      "crop": [
+        388,
+        4,
+        376,
+        232
+      ]
+    }
   },
   {
     "id": "r018",
@@ -614,7 +812,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 2,
+      "row": 0,
+      "crop": [
+        772,
+        4,
+        376,
+        232
+      ]
+    }
   },
   {
     "id": "r019",
@@ -649,7 +858,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 3,
+      "row": 0,
+      "crop": [
+        1156,
+        4,
+        376,
+        232
+      ]
+    }
   },
   {
     "id": "r020",
@@ -684,7 +904,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 0,
+      "row": 1,
+      "crop": [
+        4,
+        244,
+        376,
+        241
+      ]
+    }
   },
   {
     "id": "r061",
@@ -719,7 +950,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 1,
+      "row": 1,
+      "crop": [
+        388,
+        244,
+        376,
+        241
+      ]
+    }
   },
   {
     "id": "r023",
@@ -754,7 +996,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 2,
+      "row": 1,
+      "crop": [
+        772,
+        244,
+        376,
+        241
+      ]
+    }
   },
   {
     "id": "r024",
@@ -789,7 +1042,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 3,
+      "row": 1,
+      "crop": [
+        1156,
+        244,
+        376,
+        241
+      ]
+    }
   },
   {
     "id": "r025",
@@ -824,7 +1088,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 0,
+      "row": 2,
+      "crop": [
+        4,
+        493,
+        376,
+        242
+      ]
+    }
   },
   {
     "id": "r027",
@@ -859,7 +1134,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 1,
+      "row": 2,
+      "crop": [
+        388,
+        493,
+        376,
+        242
+      ]
+    }
   },
   {
     "id": "r028",
@@ -894,7 +1180,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 2,
+      "row": 2,
+      "crop": [
+        772,
+        493,
+        376,
+        242
+      ]
+    }
   },
   {
     "id": "r029",
@@ -929,7 +1226,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 3,
+      "row": 2,
+      "crop": [
+        1156,
+        493,
+        376,
+        242
+      ]
+    }
   },
   {
     "id": "r031",
@@ -964,7 +1272,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 0,
+      "row": 3,
+      "crop": [
+        4,
+        743,
+        376,
+        277
+      ]
+    }
   },
   {
     "id": "r032",
@@ -999,7 +1318,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 1,
+      "row": 3,
+      "crop": [
+        388,
+        743,
+        376,
+        277
+      ]
+    }
   },
   {
     "id": "r033",
@@ -1034,7 +1364,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 2,
+      "row": 3,
+      "crop": [
+        772,
+        743,
+        376,
+        277
+      ]
+    }
   },
   {
     "id": "r034",
@@ -1069,7 +1410,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 2,
+      "column": 3,
+      "row": 3,
+      "crop": [
+        1156,
+        743,
+        376,
+        277
+      ]
+    }
   },
   {
     "id": "r035",
@@ -1100,7 +1452,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 0,
+      "row": 0,
+      "crop": [
+        4,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r036",
@@ -1135,7 +1498,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 1,
+      "row": 0,
+      "crop": [
+        388,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r037",
@@ -1170,7 +1544,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 2,
+      "row": 0,
+      "crop": [
+        772,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r038",
@@ -1205,7 +1590,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 3,
+      "row": 0,
+      "crop": [
+        1156,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r040",
@@ -1244,7 +1640,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 0,
+      "row": 1,
+      "crop": [
+        4,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r041",
@@ -1283,7 +1690,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 1,
+      "row": 1,
+      "crop": [
+        388,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r042",
@@ -1322,7 +1740,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 2,
+      "row": 1,
+      "crop": [
+        772,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r043",
@@ -1357,7 +1786,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 3,
+      "row": 1,
+      "crop": [
+        1156,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r044",
@@ -1396,7 +1836,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 0,
+      "row": 2,
+      "crop": [
+        4,
+        516,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r050",
@@ -1427,7 +1878,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": false
+    "glutenFree": false,
+    "photo": {
+      "sheet": 3,
+      "column": 1,
+      "row": 2,
+      "crop": [
+        388,
+        516,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r053",
@@ -1458,7 +1920,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 2,
+      "row": 2,
+      "crop": [
+        772,
+        516,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r054",
@@ -1489,7 +1962,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 3,
+      "row": 2,
+      "crop": [
+        1156,
+        516,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r066",
@@ -1520,7 +2004,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 0,
+      "row": 3,
+      "crop": [
+        4,
+        769,
+        376,
+        251
+      ]
+    }
   },
   {
     "id": "r067",
@@ -1551,7 +2046,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 1,
+      "row": 3,
+      "crop": [
+        388,
+        769,
+        376,
+        251
+      ]
+    }
   },
   {
     "id": "r068",
@@ -1582,7 +2088,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 2,
+      "row": 3,
+      "crop": [
+        772,
+        769,
+        376,
+        251
+      ]
+    }
   },
   {
     "id": "r073",
@@ -1613,7 +2130,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 3,
+      "column": 3,
+      "row": 3,
+      "crop": [
+        1156,
+        769,
+        376,
+        251
+      ]
+    }
   },
   {
     "id": "r074",
@@ -1644,7 +2172,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 0,
+      "row": 0,
+      "crop": [
+        4,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r075",
@@ -1679,7 +2218,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 1,
+      "row": 0,
+      "crop": [
+        388,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r003",
@@ -1706,7 +2256,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 2,
+      "row": 0,
+      "crop": [
+        772,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r005",
@@ -1737,7 +2298,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 3,
+      "row": 0,
+      "crop": [
+        1156,
+        4,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r011",
@@ -1768,7 +2340,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 0,
+      "row": 1,
+      "crop": [
+        4,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r015",
@@ -1799,7 +2382,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 1,
+      "row": 1,
+      "crop": [
+        388,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r021",
@@ -1830,7 +2424,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 2,
+      "row": 1,
+      "crop": [
+        772,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r045",
@@ -1865,7 +2470,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 3,
+      "row": 1,
+      "crop": [
+        1156,
+        260,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r046",
@@ -1904,7 +2520,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 0,
+      "row": 2,
+      "crop": [
+        4,
+        516,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r047",
@@ -1939,7 +2566,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 1,
+      "row": 2,
+      "crop": [
+        388,
+        516,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r048",
@@ -1974,7 +2612,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 2,
+      "row": 2,
+      "crop": [
+        772,
+        516,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r055",
@@ -2005,7 +2654,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": false
+    "glutenFree": false,
+    "photo": {
+      "sheet": 4,
+      "column": 3,
+      "row": 2,
+      "crop": [
+        1156,
+        516,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r056",
@@ -2036,7 +2696,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 0,
+      "row": 3,
+      "crop": [
+        4,
+        772,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r057",
@@ -2067,7 +2738,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 1,
+      "row": 3,
+      "crop": [
+        388,
+        772,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r058",
@@ -2098,7 +2780,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 2,
+      "row": 3,
+      "crop": [
+        772,
+        772,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r059",
@@ -2129,7 +2822,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 4,
+      "column": 3,
+      "row": 3,
+      "crop": [
+        1156,
+        772,
+        376,
+        248
+      ]
+    }
   },
   {
     "id": "r063",
@@ -2152,7 +2856,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 0,
+      "row": 0,
+      "crop": [
+        4,
+        4,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r064",
@@ -2183,7 +2898,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 1,
+      "row": 0,
+      "crop": [
+        388,
+        4,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r069",
@@ -2218,7 +2944,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 2,
+      "row": 0,
+      "crop": [
+        772,
+        4,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r071",
@@ -2253,7 +2990,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 3,
+      "row": 0,
+      "crop": [
+        1156,
+        4,
+        376,
+        245
+      ]
+    }
   },
   {
     "id": "r072",
@@ -2284,7 +3032,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 0,
+      "row": 1,
+      "crop": [
+        4,
+        257,
+        376,
+        240
+      ]
+    }
   },
   {
     "id": "r076",
@@ -2311,7 +3070,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 1,
+      "row": 1,
+      "crop": [
+        388,
+        257,
+        376,
+        240
+      ]
+    }
   },
   {
     "id": "r078",
@@ -2342,7 +3112,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 2,
+      "row": 1,
+      "crop": [
+        772,
+        257,
+        376,
+        240
+      ]
+    }
   },
   {
     "id": "r079",
@@ -2369,7 +3150,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 3,
+      "row": 1,
+      "crop": [
+        1156,
+        257,
+        376,
+        240
+      ]
+    }
   },
   {
     "id": "r080",
@@ -2400,7 +3192,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 0,
+      "row": 2,
+      "crop": [
+        4,
+        505,
+        376,
+        221
+      ]
+    }
   },
   {
     "id": "r081",
@@ -2435,7 +3238,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 1,
+      "row": 2,
+      "crop": [
+        388,
+        505,
+        376,
+        221
+      ]
+    }
   },
   {
     "id": "r082",
@@ -2466,7 +3280,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 2,
+      "row": 2,
+      "crop": [
+        772,
+        505,
+        376,
+        221
+      ]
+    }
   },
   {
     "id": "r083",
@@ -2497,7 +3322,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 3,
+      "row": 2,
+      "crop": [
+        1156,
+        505,
+        376,
+        221
+      ]
+    }
   },
   {
     "id": "r084",
@@ -2524,7 +3360,18 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 0,
+      "row": 3,
+      "crop": [
+        4,
+        734,
+        376,
+        286
+      ]
+    }
   },
   {
     "id": "r085",
@@ -2555,7 +3402,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 1,
+      "row": 3,
+      "crop": [
+        388,
+        734,
+        376,
+        286
+      ]
+    }
   },
   {
     "id": "r086",
@@ -2586,7 +3444,18 @@
       }
     ],
     "vegan": true,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 2,
+      "row": 3,
+      "crop": [
+        772,
+        734,
+        376,
+        286
+      ]
+    }
   },
   {
     "id": "r087",
@@ -2621,6 +3490,17 @@
       }
     ],
     "vegan": false,
-    "glutenFree": true
+    "glutenFree": true,
+    "photo": {
+      "sheet": 5,
+      "column": 3,
+      "row": 3,
+      "crop": [
+        1156,
+        734,
+        376,
+        286
+      ]
+    }
   }
 ]
