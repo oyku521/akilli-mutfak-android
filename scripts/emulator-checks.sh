@@ -60,6 +60,8 @@ PY
   return 1
 }
 
+# Only current-run reports may be counted as evidence.
+rm -rf app/build/outputs/androidTest-results/connected app/build/reports/androidTests/connected
 set +e
 ./gradlew --no-daemon --max-workers=2 connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.student.recipes.RecipeAppTest
 online_result=$?
@@ -72,11 +74,15 @@ wait_mode live
 adb shell screencap -p /sdcard/kitchen-live.png
 adb pull /sdcard/kitchen-live.png "$evidence_dir/live-website.png"
 
+# The screenshot APK was signed by a different GitHub job. Remove it before Gradle
+# installs its own test-signed build; otherwise the second install can reject its signature.
+adb uninstall com.oyku.akillimutfak
 # The host retains network access for Gradle; only the Android emulator is disconnected.
 adb shell svc wifi disable
 adb shell svc data disable
+rm -rf app/build/outputs/androidTest-results/connected app/build/reports/androidTests/connected
 set +e
-./gradlew --no-daemon --max-workers=2 connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.student.recipes.OfflineFallbackTest
+./gradlew --no-daemon --max-workers=2 --rerun-tasks connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.student.recipes.OfflineFallbackTest
 offline_result=$?
 set -e
 save_reports offline-tests
