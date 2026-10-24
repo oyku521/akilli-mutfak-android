@@ -56,8 +56,12 @@ PYREPORT
 wait_mode() {
   local expected="$1"
   for attempt in $(seq 1 20); do
-    adb shell uiautomator dump /sdcard/kitchen-window.xml >/dev/null
-    adb pull /sdcard/kitchen-window.xml "$evidence_dir/window.xml" >/dev/null
+    # UIAutomator can briefly return a null root after a cold WebView launch.
+    # Retry only fresh captures; a previous XML file must never satisfy readiness.
+    rm -f "$evidence_dir/window.xml"
+    adb shell rm -f /sdcard/kitchen-window.xml
+    if adb shell uiautomator dump /sdcard/kitchen-window.xml >/dev/null &&
+       adb pull /sdcard/kitchen-window.xml "$evidence_dir/window.xml" >/dev/null; then
     if python3 - "$evidence_dir/window.xml" "$expected" <<'PY'
 import sys,xml.etree.ElementTree as ET
 root=ET.parse(sys.argv[1]).getroot()
@@ -67,6 +71,7 @@ sys.exit(0 if any(value in text for value in expected) else 1)
 PY
     then
       return 0
+    fi
     fi
     sleep 1
   done
