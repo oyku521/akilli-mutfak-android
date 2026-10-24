@@ -9,6 +9,20 @@ restore_network() {
 }
 trap restore_network EXIT
 
+remove_installed_app() {
+  local installed_path
+  if installed_path="$(adb shell pm path com.oyku.akillimutfak)" && [[ "$installed_path" == package:* ]]; then
+    adb uninstall com.oyku.akillimutfak
+  fi
+}
+
+install_screenshot_apk() {
+  # Gradle and the build-artifact job have different debug signing keys.
+  # A clean install works whether connected tests retain or remove their target app.
+  remove_installed_app
+  adb install "$apk_path"
+}
+
 save_reports() {
   local label="$1"
   mkdir -p "$evidence_dir/$label"
@@ -68,7 +82,7 @@ online_result=$?
 set -e
 save_reports online-tests
 if [ "$online_result" -ne 0 ]; then exit "$online_result"; fi
-adb install -r "$apk_path"
+install_screenshot_apk
 adb shell am start -W -n com.oyku.akillimutfak/com.student.recipes.MainActivity
 wait_mode live
 adb shell screencap -p /sdcard/kitchen-live.png
@@ -76,7 +90,7 @@ adb pull /sdcard/kitchen-live.png "$evidence_dir/live-website.png"
 
 # The screenshot APK was signed by a different GitHub job. Remove it before Gradle
 # installs its own test-signed build; otherwise the second install can reject its signature.
-adb uninstall com.oyku.akillimutfak
+remove_installed_app
 # The host retains network access for Gradle; only the Android emulator is disconnected.
 adb shell svc wifi disable
 adb shell svc data disable
@@ -87,7 +101,7 @@ offline_result=$?
 set -e
 save_reports offline-tests
 if [ "$offline_result" -ne 0 ]; then exit "$offline_result"; fi
-adb install -r "$apk_path"
+install_screenshot_apk
 adb shell am start -W -n com.oyku.akillimutfak/com.student.recipes.MainActivity
 wait_mode offline
 adb shell screencap -p /sdcard/kitchen-offline.png
