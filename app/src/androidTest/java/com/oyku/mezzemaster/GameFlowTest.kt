@@ -29,8 +29,9 @@ class GameFlowTest {
     }
     @Test fun playAllFiveOrdersAndSaveBestScore() {
         pause(); shot("01-home.png")
-        rule.onNodeWithTag("start").performClick()
+        rule.onNodeWithTag("start").performScrollTo().performClick()
         pause()
+        rule.onNodeWithTag("kitchen").performScrollToNode(hasTestTag("read-0"))
         rule.onNodeWithTag("read-0").performClick()
         pause(); shot("02-recipe-nutrition.png")
         rule.onNodeWithTag("closeRecipe").performClick()

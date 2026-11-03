@@ -24,6 +24,7 @@ jobs:
       - name: Build, unit tests and Android lint
         run: ./gradlew --no-daemon --max-workers=2 assembleDebug testDebugUnitTest lintDebug assembleDebugAndroidTest
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: Lebanese-Mezze-APK
           path: app/build/outputs/apk/debug/app-debug.apk
