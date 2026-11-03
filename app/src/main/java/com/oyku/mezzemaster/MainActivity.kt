@@ -96,7 +96,7 @@ class MainActivity : ComponentActivity() {
                     Title("Small plates.\nBig possibilities.", 36)
                     Text("Cook with care. Balance your plate.\nBecome a mezze master.", color = Muted, modifier = Modifier.padding(top = 10.dp))
                     Box(Modifier.fillMaxWidth().height(235.dp).padding(vertical = 10.dp).clip(RoundedCornerShape(26.dp)).background(Color(0xFFE9E6D7))) {
-                        TableArt(Modifier.fillMaxSize())
+                        RestaurantArt(Modifier.fillMaxSize())
                         Surface(Modifier.align(Alignment.BottomStart).padding(12.dp), color = Paper, shape = RoundedCornerShape(20.dp)) {
                             Text("10 RECIPES  ·  5 GUESTS", Modifier.padding(horizontal = 12.dp, vertical = 7.dp), color = Olive, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                         }
@@ -133,6 +133,9 @@ class MainActivity : ComponentActivity() {
                     LazyColumn(Modifier.weight(1f).testTag("kitchen"), contentPadding = PaddingValues(start = 18.dp, end = 18.dp, bottom = 16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         item {
                             Panel {
+                                Text("CEDAR HOUSE  ·  TABLE ${game.round + 1}", color = Wine, fontSize = 10.sp, letterSpacing = 1.sp, fontWeight = FontWeight.Bold)
+                                RestaurantArt(Modifier.fillMaxWidth().padding(top = 8.dp).height(140.dp).clip(RoundedCornerShape(14.dp)).testTag("restaurant"), guest = game.round, servings = game.plate.size)
+                                Spacer(Modifier.height(10.dp))
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     ChefArt(Modifier.size(62.dp), game.round)
                                     Spacer(Modifier.width(12.dp))

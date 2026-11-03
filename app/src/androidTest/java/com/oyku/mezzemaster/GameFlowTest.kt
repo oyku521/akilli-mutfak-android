@@ -48,6 +48,8 @@ class GameFlowTest {
                 rule.activityRule.scenario.recreate()
                 rule.waitForIdle()
                 rule.onNodeWithTag("plateCalories").assertTextEquals("470 / 350–500 kcal")
+                rule.onNodeWithTag("kitchen").performScrollToIndex(0)
+                rule.onNodeWithTag("restaurant").assertExists()
                 shot("03-gameplay-balanced-plate.png")
             }
             rule.onNodeWithTag("serve").performClick()

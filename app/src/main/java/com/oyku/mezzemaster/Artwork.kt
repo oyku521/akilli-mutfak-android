@@ -141,3 +141,74 @@ private fun DrawScope.dish(id: Int) {
         }
     }
 }
+
+/** A warm Lebanese dining room, drawn locally with no network assets. */
+@Composable fun RestaurantArt(modifier: Modifier, guest: Int = -1, servings: Int = 0) {
+    Canvas(modifier) {
+        val sx = size.width / 400f
+        val sy = size.height / 240f
+        withTransform({ scale(sx,sy,Offset.Zero) }) {
+            drawRect(Color(0xFFECDCC2), size = Size(400f,240f))
+            drawRect(Color(0xFFDFCCAC), Offset(0f,145f),Size(400f,95f))
+            // Perspective floor tiles.
+            for(i in 0..10) drawLine(Color(0xFFC5AC87),Offset(200f+(i-5)*18,145f),Offset((i-5)*85f+200,240f),1f)
+            for(y in listOf(157f,175f,199f,229f)) drawLine(Color(0xFFC5AC87),Offset(0f,y),Offset(400f,y),1f)
+            drawRect(Olive,Offset(0f,133f),Size(400f,8f))
+            // Arched windows, evening sky and cedar silhouettes.
+            for(x in listOf(35f,169f,303f)) {
+                val arch=Path().apply { moveTo(x,128f); lineTo(x,61f); cubicTo(x,17f,x+62,17f,x+62,61f); lineTo(x+62,128f); close() }
+                drawPath(arch,Color(0xFF89A8AA))
+                drawCircle(Color(0xFFF4D98D),9f,Offset(x+44,54f))
+                val cedar=Path().apply { moveTo(x+30,66f); lineTo(x+12,87f); lineTo(x+22,87f); lineTo(x+7,106f); lineTo(x+27,106f); lineTo(x+27,119f); lineTo(x+33,119f); lineTo(x+33,106f); lineTo(x+53,106f); lineTo(x+38,87f); lineTo(x+48,87f); close() }
+                drawPath(cedar,Olive)
+                drawPath(arch,Color(0xFFAF8053),style=Stroke(5f))
+                drawLine(Color(0xFFAF8053),Offset(x+31,35f),Offset(x+31,128f),3f)
+                drawLine(Color(0xFFAF8053),Offset(x,78f),Offset(x+62,78f),3f)
+            }
+            // Hanging brass lanterns.
+            for(x in listOf(132f,268f)) {
+                drawLine(Color(0xFF69583A),Offset(x,0f),Offset(x,38f),2f)
+                drawCircle(Gold.copy(alpha=.12f),25f,Offset(x,53f))
+                drawRoundRect(Gold,Offset(x-10,38f),Size(20f,28f),androidx.compose.ui.geometry.CornerRadius(5f))
+                drawRect(Color(0xFFFFE1A1),Offset(x-5,43f),Size(10f,18f))
+                drawLine(Olive,Offset(x-12,67f),Offset(x+12,67f),2f)
+            }
+            // Background bistro tables.
+            for(x in listOf(40f,330f)) {
+                drawRoundRect(Wine,Offset(x-19,148f),Size(18f,38f),androidx.compose.ui.geometry.CornerRadius(5f))
+                drawRoundRect(Wine,Offset(x+41,148f),Size(18f,38f),androidx.compose.ui.geometry.CornerRadius(5f))
+                drawLine(Color(0xFF71523A),Offset(x+20,165f),Offset(x+20,199f),5f)
+                drawOval(Color(0xFFF9F1DF),Offset(x-10,153f),Size(80f,24f))
+                drawOval(Gold,Offset(x+2,158f),Size(20f,9f))
+                drawOval(Gold,Offset(x+29,158f),Size(20f,9f))
+            }
+            // Guest seated at the player's table; each order gets a different outfit.
+            val person = if(guest < 0) 0 else guest
+            drawRoundRect(Wine,Offset(164f,131f),Size(72f,70f),androidx.compose.ui.geometry.CornerRadius(12f))
+            drawOval(if(person%2==0) Olive else Color(0xFF9D5260),Offset(171f,125f),Size(58f,52f))
+            drawOval(Color(0xFF453129),Offset(181f,79f),Size(39f,48f))
+            drawOval(if(person%2==0) Color(0xFFDCA87D) else Color(0xFFC68C63),Offset(184f,88f),Size(32f,39f))
+            drawCircle(Ink,2f,Offset(194f,103f)); drawCircle(Ink,2f,Offset(207f,103f))
+            drawArc(Wine,10f,160f,false,Offset(195f,109f),Size(11f,6f),style=Stroke(1.5f))
+            // Foreground table, linen runner, ceramic plate, water and flowers.
+            drawLine(Color(0xFF71523A),Offset(145f,201f),Offset(137f,240f),6f)
+            drawLine(Color(0xFF71523A),Offset(254f,201f),Offset(263f,240f),6f)
+            drawOval(Color(0xFFB78B58),Offset(105f,168f),Size(190f,57f))
+            drawOval(Color(0xFFFAF1DE),Offset(105f,164f),Size(190f,53f))
+            drawRect(Wine.copy(alpha=.8f),Offset(177f,166f),Size(45f,50f))
+            drawOval(Color.White,Offset(151f,178f),Size(54f,25f))
+            drawOval(Olive.copy(alpha=.35f),Offset(156f,181f),Size(44f,18f),style=Stroke(1.5f))
+            for(i in 0 until servings.coerceAtMost(6)) drawCircle(if(i%2==0) Gold else Olive,4f,Offset(164f+(i%3)*12,186f+(i/3)*8))
+            drawRoundRect(Color(0xFFB5D5D5),Offset(230f,175f),Size(13f,19f),androidx.compose.ui.geometry.CornerRadius(3f))
+            drawLine(Olive,Offset(254f,184f),Offset(254f,162f),2f)
+            drawCircle(Wine,5f,Offset(254f,161f))
+            drawOval(Gold,Offset(247f,181f),Size(14f,10f))
+            // Terracotta planter.
+            drawRoundRect(Color(0xFFB96B46),Offset(9f,200f),Size(26f,32f),androidx.compose.ui.geometry.CornerRadius(4f))
+            for(i in 0..4) {
+                drawLine(Olive,Offset(22f,204f),Offset(10f+i*6,169f+(i%2)*9),2f)
+                drawOval(Olive,Offset(4f+i*6,169f+(i%2)*9),Size(15f,8f))
+            }
+        }
+    }
+}

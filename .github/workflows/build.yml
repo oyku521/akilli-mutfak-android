@@ -2,6 +2,7 @@ name: Lebanese Mezze - Android build and gameplay
 on:
   push:
     branches: [lebanese-mezze]
+    paths-ignore: ['.github/workflows/share-video.yml']
   workflow_dispatch:
 permissions:
   contents: read
