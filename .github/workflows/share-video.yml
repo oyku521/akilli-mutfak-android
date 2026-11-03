@@ -18,9 +18,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh run watch 41596436188 --exit-status --interval 10
           gh run download 41596436188 --name Android-emulator-video-and-screenshots --dir delivery
           VIDEO_PATH=$(find delivery -name mezze-gameplay.mp4 -type f -print -quit)
           test -n "$VIDEO_PATH"
           test -s "$VIDEO_PATH"
-          gh release create lebanese-mezze-restaurant-v2 "$VIDEO_PATH" --target d743443cd4ecc395187e8d92e5564f12231081de --title "Lebanese Mezze - Restaurant Gameplay" --notes "User-approved public MP4 from successful Android emulator test run 41596436188. Download mezze-gameplay.mp4 and upload it to YouTube for the exam."
+          gh release create lebanese-mezze-restaurant-v2 "$VIDEO_PATH" --target lebanese-mezze --title "Lebanese Mezze - Restaurant Gameplay" --notes "User-approved public MP4 from successful Android emulator test run 41596436188. Download mezze-gameplay.mp4 and upload it to YouTube for the exam."
