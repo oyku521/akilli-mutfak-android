@@ -1,0 +1,25 @@
+name: Publish approved gameplay video
+on:
+  push:
+    branches: [lebanese-mezze]
+    paths: ['.github/workflows/share-video.yml']
+permissions:
+  contents: read
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Publish user-approved MP4 download
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh run download 41593067093 --name Android-emulator-video-and-screenshots --dir delivery
+          VIDEO_PATH=$(rg --files delivery -g mezze-gameplay.mp4)
+          test -n "$VIDEO_PATH"
+          test -s "$VIDEO_PATH"
+          gh release create lebanese-mezze-demo-v1 "$VIDEO_PATH" --target d3a8770503c64d0bff2d9ddc80128ac2b0fa2850 --title "Lebanese Mezze - Gameplay Video" --notes "User-approved public MP4 from successful Android emulator test run 41593067093. Download mezze-gameplay.mp4 and upload it to YouTube for the exam."
