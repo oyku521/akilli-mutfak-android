@@ -1,59 +1,50 @@
-# Smart Kitchen / Akıllı Mutfak — Android 2.0
+# Lebanese Mezze: Plate Master
 
-Android Studio kullanmadan GitHub Actions ile derlenen Android uygulaması. Paket kimliği `com.oyku.akillimutfak`, minimum Android 6.0, hedef Android 15.
+An English-language, offline Android cooking game built with Kotlin and Jetpack Compose in Android Studio.
 
-## Task 4 — Extra point
+## Download and run
+Open the latest successful [Actions run](https://github.com/oyku521/akilli-mutfak-android/actions?query=branch%3Alebanese-mezze).
+Download **Lebanese-Mezze-APK**, unzip and install app-debug.apk on an Android device or drag it onto an Android Studio emulator (Android 8+).
+Download **Android-emulator-video-and-screenshots** for a real automated emulator gameplay video and screenshots.
 
-- **Tasarım:** Yeni yaprak logosu, yeşil/krem renk paleti, özgün yemek çizimleri, mobil tarif kartları, İngilizce/Türkçe seçenekleri ve makro besin değerleri uygulamaya eklendi. Tasarım kodla oluşturulmuştur; Canva kullanıldığı iddia edilmez.
-- **Canlı site entegrasyonu:** Uygulama açıldığında `https://oyku521.github.io/gastronomy-task3-yaz./` adresini kendi WebView penceresinde açar. İnternet varken yeni site içeriği sonraki açılışta veya **↻ Live / Canlı** düğmesiyle alınır; web içeriği değişiklikleri için yeni APK gerekmez. Bu düğme dış tarayıcı açmaz.
-- **Çevrimdışı yedek:** Ağ hatası, HTTP hatası, TLS hatası veya 15 saniyelik yükleme zaman aşımında cihazdaki 80 tariflik kopyaya geçilir. **Offline / Çevrimdışı** düğmesi bu kopyayı doğrudan açar. Sertifika doğrulaması kapatılmaz.
+## Android Studio
+Clone this repository, select the **lebanese-mezze** branch, open the project folder, sync Gradle and Run app.
+Java 17, Gradle 8.9, Android Gradle Plugin 8.7.3, Kotlin 2.0.21, compile SDK 35.
+Official IDE: https://developer.android.com/studio
+The main branch retains the previous Smart Kitchen project; this branch is a separate game with its own application ID.
 
-Canlı ve çevrimdışı mod yerel depolamaları farklı web kökenlerindedir; favoriler, dil ve malzeme seçimleri modlar arasında otomatik eşitlenmez. Bu özellik içerik güncelliği sağlar, kullanıcı hesabı/veri senkronizasyonu değildir. Cihazdaki kopya APK ile sabittir; yenilemek için kaynak kopyayı güncellemek ve yeni APK derlemek gerekir. Canlı site gelecekte değişirse tarif sayısı 80'in üzerine çıkabilir.
+## Game
+Five guests request two Lebanese mezze plus a calorie range and minimum protein.
+Read recipes, select correct ingredients, prepare servings and balance the plate.
+A plate holds up to six servings. Tap a serving to remove it.
+All ten dishes have original programmatic illustrations, recipes, serving sizes and calories/protein/carbohydrates/fat.
+Nutrition is estimated per serving and varies by preparation, especially frying.
 
-Android WebView isteklerinde `SmartKitchenAndroid/2.0` işareti kullanılır. Website bu işareti görünce PWA yükleme düğmesini ve service worker kaydını kapatır; böylece canlı mod güncel HTTPS içeriğini alır. Normal web tarayıcılarında sitenin PWA/çevrimdışı özelliği korunur. Uygulama canlı modda HTTP önbelleğini kullanmaz. Sadece kendi HTTPS site yolu ve yerel varlık kökeni uygulama içinde açılır; diğer web bağlantıları harici tarayıcıya gider. JavaScript-native köprüsü eklenmemiştir.
+**Recipes:** Hummus, Baba Ghanoush, Tabbouleh, Fattoush, Falafel, Labneh, Muhammara, Warak Enab, Kibbeh and Batata Harra.
 
-## 80 tariflik içerik
+## Scoring
+Each requested recipe present on the plate: 20 points, maximum 40.
+Calories within the requested range: 30.
+Protein at or above the requested minimum: 20.
+Serve within 90 seconds: 10.
+Every rejected ingredient attempt subtracts 5. Round score cannot drop below zero.
+Repeated portions do not multiply requested-recipe points.
+After 90 seconds, play continues without the time bonus. The clock keeps running in the background.
+Five orders yield at most 500. Best score persists on the device. Rotation preserves the active game.
 
-İngilizce/Türkçe klasik yemekler, vegan ve glutensiz malzemeli seçenekler; tek malzemeyle öneri, kombinlenebilir diyet filtreleri, favoriler, porsiyon ayarı, gramajlar, hazırlanış ve yaklaşık besin değerleri. Tarif verileri `app/src/main/assets/recipes.json`, malzeme tahminleri `food-catalog.json` içinde koddan ayrı tutulur. Kalori ve makrolar genel editoryal tahminlerdir; doğrulanmış klinik/marka verisi değildir. Glutensiz malzeme etiketi çölyak güvenliği sertifikası değildir; sertifikalı ürün ve çapraz temas kontrolü gerekir.
-
-## APK ve emülatör kanıtları
-
-[GitHub Actions](https://github.com/oyku521/akilli-mutfak-android/actions) → **Build Android APK** → son başarılı çalışma → **Artifacts**:
-
-- **Akilli-Mutfak-APK:** ZIP içindeki `app-debug.apk` Android telefona kurulur.
-- **Android-emulator-evidence:** `live-website.png`, `offline-80-recipes.png`, `emulator-screenshot.png` ve test raporları. Canlı site testi uygulamanın gerçek GitHub Pages adresini açtığını doğrular. İkinci test turunda yalnızca emülatörün Wi-Fi ve mobil verisi kapatılır; yerel kopyaya otomatik geçiş doğrulanır ve ağ tekrar açılır.
-- **Android-lint-report:** Statik Android analiz raporu.
-
-Bu eğitim amaçlı debug APK'dır. Yeni GitHub koşucusunun debug imzası eski kurulumdan farklı olabilir. İmza uyuşmazlığında eski uygulamayı kaldırıp yeni APK'yı kurmak gerekir; kaldırma cihazdaki eski favorileri siler. Play Store sürümü ve kalıcı imza anahtarı bu ödevin kapsamı değildir.
-
-Word'e mevcut zorunlu kanıtların yanında şu açıklama eklenebilir:
-
-> Extra work: I improved the app with an original logo, coordinated colors, recipe illustrations and an English/Turkish interface. I embedded my live GitHub Pages website inside the Android app, so published website changes appear when the app opens online or when Live is refreshed, without rebuilding the APK. If the website is unreachable, the app automatically falls back to an offline snapshot containing 80 recipes. Live and offline emulator screenshots demonstrate both modes.
-
-Ekran görüntülerini gerçek başarılı çalışmadan alın. Telefon videosu gerçek Android telefonda çekilmelidir. GitHub emülatör ekran görüntüsü, öğretmenin ayrıca istediği Appetize gibi tarayıcıda etkileşimli emülatörün yerine geçtiği iddiasıyla kullanılmamalıdır. Yeni APK Appetize'a yüklenerek güncel uygulamanın görüntüsü alınabilir.
-
-## Kaynak kopyayı yenileme
-
-Kardeş web deposu aynı çalışma alanında mevcutken:
-
+## Verification
 ```sh
-python3 scripts/update-bundled-site.py --website ../gastronomy-task3-yaz.
+./gradlew assembleDebug testDebugUnitTest lintDebug assembleDebugAndroidTest
+./gradlew connectedDebugAndroidTest
 ```
+Unit tests verify achievable nutrition goals, scoring, penalties, ingredient matching and portion totals.
+The emulator test plays all five orders, checks wrong-ingredient handling, verifies nutrition totals, rotates/recreates the activity and checks the final saved score.
+GitHub Actions records this test on an actual Android emulator; the recording is an automated demonstration.
 
-Bu işlem ağ erişimi kullanmadan web arayüzü, JSON verileri, logo ve çizimleri APK'nın yerel varlıklarına kopyalar. Web sitesi uygulamadan bağımsız olarak yayınlanabilir. Mevcut check-out yeterlidir; ek Git worktree gerekmez.
+## Exam submission
+Submit a single .docx containing:
+1. Repository: https://github.com/oyku521/akilli-mutfak-android/tree/lebanese-mezze
+2. A screenshot of the successful GitHub Actions run with its green checkmark (capture the real completed run).
+3. YouTube URL of the emulator gameplay recording. Download the MP4 artifact and upload it to your own YouTube account; verify that the teacher can open the link.
 
-## Derleme ve test
-
-Java 17, Gradle 8.9, Android Gradle Plugin 8.7.3, Kotlin 2.0.21 ve SDK/Build Tools 35 kullanılır. Gradle wrapper dağıtımı SHA-256 ile doğrulanır.
-
-```sh
-./gradlew --no-daemon --max-workers=2 assembleDebug lintDebug assembleDebugAndroidTest
-```
-
-Bu komut test APK'sını derler; cihaz testlerini çalıştırmaz. Bağlı emülatörde normal ağ ile:
-
-```sh
-./gradlew connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.student.recipes.RecipeAppTest
-```
-
-`OfflineFallbackTest` yalnızca ağı kapalı **test emülatöründe** çalıştırılmalıdır. `scripts/emulator-checks.sh` GitHub emülatörü için iki test turunu, ekran görüntülerini ve ağın geri açılmasını yönetir. Gerçek kişisel telefonda bu betiği kullanmayın.
+The emulator screenshots supplement the video and do not replace either the video or the Actions screenshot.

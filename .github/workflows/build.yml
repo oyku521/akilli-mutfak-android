@@ -1,136 +1,66 @@
-name: Build Android APK
+name: Lebanese Mezze - Android build and gameplay
 on:
   push:
-    branches: [main]
-    paths:
-      - 'android-app/**'
-      - 'app/**'
-      - 'gradle/**'
-      - '*.gradle.kts'
-      - 'gradle.properties'
-      - 'gradlew*'
-      - 'scripts/**'
-      - '.github/workflows/build.yml'
+    branches: [lebanese-mezze]
   workflow_dispatch:
-    inputs:
-      run_emulator:
-        description: 'Run Android emulator tests and save a screenshot'
-        type: boolean
-        default: true
 permissions:
   contents: read
 jobs:
   build:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    name: Build APK and verify scoring
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
-      - name: Find Android project
-        id: project
-        shell: bash
-        run: |
-          if [ -f android-app/settings.gradle.kts ]; then
-            echo 'path=android-app' >> "$GITHUB_OUTPUT"
-          else
-            echo 'path=.' >> "$GITHUB_OUTPUT"
-          fi
-      - uses: actions/setup-java@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - name: Prepare preinstalled Android SDK
-        shell: bash
-        run: |
-          test -d "$ANDROID_HOME"
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+      - uses: android-actions/setup-android@v3
       - uses: gradle/actions/setup-gradle@v4
-        with:
-          validate-wrappers: true
-      - name: Build APK and run lint
-        working-directory: ${{ steps.project.outputs.path }}
-        run: |
-          chmod +x gradlew
-          ./gradlew --no-daemon --max-workers=2 assembleDebug lintDebug
-      - name: Verify APK signature and contents
-        working-directory: ${{ steps.project.outputs.path }}
-        shell: bash
-        run: |
-          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose app/build/outputs/apk/debug/app-debug.apk
-          python3 - <<'PY'
-          import json, zipfile
-          with zipfile.ZipFile('app/build/outputs/apk/debug/app-debug.apk') as apk:
-              names = apk.namelist()
-              assert 'AndroidManifest.xml' in names
-              assert any(n.startswith('classes') and n.endswith('.dex') for n in names)
-              assert len(json.loads(apk.read('assets/recipes.json'))) == 80
-              assert len(json.loads(apk.read('assets/food-catalog.json'))) > 0
-              assert 'assets/images/hero.svg' in names
-          PY
+      - name: Build, unit tests and Android lint
+        run: ./gradlew --no-daemon --max-workers=2 assembleDebug testDebugUnitTest lintDebug assembleDebugAndroidTest
       - uses: actions/upload-artifact@v4
         with:
-          name: Akilli-Mutfak-APK
-          path: ${{ steps.project.outputs.path }}/app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
-          retention-days: 30
+          name: Lebanese-Mezze-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Android-lint-report
-          path: ${{ steps.project.outputs.path }}/app/build/reports/lint-results-debug.html
-          if-no-files-found: ignore
+          name: Build-test-and-lint-reports
+          path: |
+            app/build/reports/
+            app/build/test-results/
   emulator:
-    if: github.event_name == 'push' || inputs.run_emulator
+    name: Android emulator gameplay and recording
     needs: build
-    runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v5
-      - name: Find Android project
-        id: project
-        shell: bash
-        run: |
-          if [ -f android-app/settings.gradle.kts ]; then
-            echo 'path=android-app' >> "$GITHUB_OUTPUT"
-          else
-            echo 'path=.' >> "$GITHUB_OUTPUT"
-          fi
-      - uses: actions/setup-java@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - name: Prepare preinstalled Android SDK
-        shell: bash
-        run: |
-          test -d "$ANDROID_HOME"
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platform-tools" "platforms;android-35" "build-tools;35.0.0"
       - uses: gradle/actions/setup-gradle@v4
-      - name: Download built APK for screenshot
-        uses: actions/download-artifact@v4
-        with:
-          name: Akilli-Mutfak-APK
-          path: apk-for-emulator
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
-      - name: Test on Android emulator
-        uses: reactivecircus/android-emulator-runner@v2
+      - uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 35
-          target: google_apis
+          api-level: 30
           arch: x86_64
           profile: pixel_2
           disable-animations: true
-          script: |
-            cd '${{ steps.project.outputs.path }}' && bash scripts/emulator-checks.sh "$GITHUB_WORKSPACE/apk-for-emulator/app-debug.apk" "$GITHUB_WORKSPACE/emulator-evidence"
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
+          script: bash scripts/record-gameplay.sh
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Android-emulator-evidence
+          name: Android-emulator-video-and-screenshots
           path: |
-            emulator-screenshot.png
-            emulator-evidence/**
-            **/app/build/reports/androidTests/connected/**
-            **/app/build/outputs/androidTest-results/connected/**
-          if-no-files-found: ignore
+            evidence/
+            app/build/reports/androidTests/
+            app/build/outputs/androidTest-results/

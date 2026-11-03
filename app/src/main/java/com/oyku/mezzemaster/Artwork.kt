@@ -1,0 +1,143 @@
+package com.oyku.mezzemaster
+
+import androidx.compose.foundation.Canvas
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.drawscope.withTransform
+import kotlin.math.cos
+import kotlin.math.sin
+
+@Composable fun Motif(modifier: Modifier) {
+    Canvas(modifier) {
+        val step = 22f
+        var x = 0f
+        while (x < size.width) {
+            val p = Path().apply { moveTo(x, size.height/2); lineTo(x+step/2,0f); lineTo(x+step,size.height/2); lineTo(x+step/2,size.height); close() }
+            drawPath(p, if ((x/step).toInt()%3 == 0) Wine else Olive.copy(alpha = .35f))
+            x += step + 5f
+        }
+    }
+}
+@Composable fun FoodArt(id: Int, modifier: Modifier) {
+    Canvas(modifier) {
+        val s = size.minDimension / 200f
+        withTransform({ translate((size.width-200*s)/2, (size.height-200*s)/2); scale(s,s,Offset.Zero) }) { dish(id) }
+    }
+}
+private fun DrawScope.dish(id: Int) {
+    drawOval(Color(0x2527352C), Offset(15f,23f), Size(176f,166f))
+    drawCircle(Color(0xFFFFFDF6), 86f, Offset(100f,96f))
+    drawCircle(Color(0xFF497470), 78f, Offset(100f,96f), style = Stroke(2f))
+    for (i in 0..23) {
+        val a = i * Math.PI / 12
+        drawCircle(Color(0xFF497470).copy(alpha=.5f), 1.6f, Offset(100f+82*cos(a).toFloat(),96f+82*sin(a).toFloat()))
+    }
+    val base = when(id) {
+        0 -> Color(0xFFE0C58C); 1 -> Color(0xFFB6A37F); 2 -> Color(0xFF537A3D); 3 -> Color(0xFF70984B)
+        4 -> Color(0xFFECE1C5); 5 -> Color(0xFFFFF9E6); 6 -> Color(0xFFAC452B); 7 -> Color(0xFFE7D8AE)
+        8 -> Color(0xFFEBDDC2); else -> Color(0xFFE9D09B)
+    }
+    drawCircle(base, 68f, Offset(100f,96f))
+    when(id) {
+        0,1,5,6 -> {
+            for(i in 0..3) drawArc(if(id==6) Color(0xFFCA7139) else Gold.copy(alpha=.7f), 20f+i*18, 270f, false, Offset(54f+i*7,50f+i*7), Size(92f-i*14,92f-i*14), style=Stroke(3f))
+            drawOval(Color(0xFFD4A536),Offset(76f,74f),Size(49f,35f))
+            if(id==0) for(i in 0..6) {
+                val a=i*Math.PI/3.5
+                drawCircle(Color(0xFFECD7A5),6f,Offset(100f+26*cos(a).toFloat(),96f+24*sin(a).toFloat()))
+            }
+            if(id==6) for(i in 0..4) {
+                val x=65f+i*15; drawOval(Color(0xFF74502E),Offset(x,83f+(i%2)*20),Size(15f,10f))
+                drawLine(Color(0xFFC19B68),Offset(x+7,84f+(i%2)*20),Offset(x+7,91f+(i%2)*20),2f)
+            }
+            if(id==5) for(i in 0..15) drawCircle(Olive.copy(alpha=.7f),1.8f,Offset(72f+(i*17%60),70f+(i*23%55)))
+        }
+        2,3 -> {
+            for(i in 0..42) {
+                val x=49f+(i*31%101); val y=45f+(i*47%105)
+                if ((x-100)*(x-100)+(y-96)*(y-96)<3600) {
+                    drawOval(if(i%3==0) Color(0xFF8DBD60) else Color(0xFF365F31),Offset(x,y),Size(13f,8f))
+                    if(i%5==0) drawRoundRect(Color(0xFFC65039),Offset(x,y),Size(12f,10f),androidx.compose.ui.geometry.CornerRadius(2f))
+                    if(id==3 && i%7==0) rotate(30f,Offset(x,y)) { drawRect(Color(0xFFCBA265),Offset(x,y),Size(22f,15f)) }
+                    if(id==2 && i%2==0) drawCircle(Color(0xFFE0CC8D),2f,Offset(x+4,y+3))
+                }
+            }
+        }
+        4 -> {
+            listOf(Offset(70f,77f),Offset(128f,78f),Offset(100f,126f)).forEach { c ->
+                drawCircle(Color(0xFF78512B),25f,c); drawCircle(Color(0xFFAD803A),22f,Offset(c.x-2,c.y-3))
+                for(j in 0..12) drawCircle(if(j%3==0) Olive else Color(0xFFCCA75A),1.6f,Offset(c.x-15+(j*11%30),c.y-15+(j*17%30)))
+            }
+        }
+        7 -> for(i in 0..3) {
+            val x=54f+(i%2)*48; val y=53f+(i/2)*47
+            rotate(-18f,Offset(x+20,y+17)) {
+                drawRoundRect(Color(0xFF4E6332),Offset(x,y),Size(40f,30f),androidx.compose.ui.geometry.CornerRadius(12f))
+                for(j in 0..3) drawLine(Color(0xFF81924D),Offset(x+8+j*7,y+4),Offset(x+8+j*7,y+26),1.5f)
+            }
+        }
+        8 -> for(i in 0..1) {
+            val x=78f+i*46; val y=88f+i*23
+            rotate(if(i==0) -20f else 25f,Offset(x,y)) {
+                val p=Path().apply { moveTo(x,y-43); cubicTo(x-40,y-10,x-30,y+27,x,y+43); cubicTo(x+30,y+27,x+40,y-10,x,y-43); close() }
+                drawPath(p,Color(0xFF99613A))
+                for(j in 0..8) drawCircle(Color(0xFFC08C46),1.5f,Offset(x-12+(j*7%24),y-20+(j*13%40)))
+            }
+        }
+        else -> for(i in 0..13) {
+            val x=51f+(i*31%87); val y=49f+(i*29%87)
+            rotate((i*19).toFloat(), Offset(x+10,y+10)) {
+                drawRoundRect(Color(0xFFB87E37),Offset(x,y),Size(23f,23f),androidx.compose.ui.geometry.CornerRadius(3f))
+                drawRect(Color(0xFFE6B65F),Offset(x+1,y+1),Size(17f,16f))
+                drawCircle(Color(0xFFB3392E),2f,Offset(x+8,y+7))
+            }
+        }
+    }
+    // Parsley sprig and a pinch of sumac.
+    for(i in 0..3) drawOval(Olive,Offset(117f+i*4,121f-i*6),Size(12f,6f))
+    drawLine(Olive,Offset(118f,139f),Offset(140f,112f),2f)
+    for(i in 0..8) drawCircle(Wine.copy(alpha=.8f),1.4f,Offset(59f+i*4,115f+(i*7%18)))
+}
+@Composable fun TableArt(modifier: Modifier) {
+    Canvas(modifier) {
+        val scale = size.width/400f
+        withTransform({ scale(scale,scale,Offset.Zero) }) {
+            drawRect(Color(0xFFE9E6D7),size=Size(400f,400f))
+            for(i in 0..14) drawLine(Color.White.copy(alpha=.22f),Offset(i*32f,0f),Offset(i*32f,400f),2f)
+            // Linen table runner.
+            drawRect(Color(0xFFDDD0AE),Offset(0f,90f),Size(400f,100f))
+            for(i in 0..24) drawLine(Wine.copy(alpha=.25f),Offset(i*18f,95f),Offset(i*18f+12,102f),3f)
+            withTransform({ translate(-25f,-26f); scale(.86f,.86f,Offset.Zero) }) { dish(0) }
+            withTransform({ translate(170f,-17f); scale(.88f,.88f,Offset.Zero) }) { dish(4) }
+            withTransform({ translate(77f,79f); scale(.95f,.95f,Offset.Zero) }) { dish(2) }
+            drawOval(Color(0xFFDFC17B),Offset(304f,167f),Size(85f,59f))
+            for(i in 0..8) drawCircle(Color(0xFFC49B54),2f,Offset(318f+i*7,180f+(i*13%32)))
+            drawLine(Olive,Offset(20f,223f),Offset(60f,193f),3f)
+            for(i in 0..5) drawOval(Olive,Offset(22f+i*6,206f-i*4),Size(18f,8f))
+        }
+    }
+}
+@Composable fun ChefArt(modifier: Modifier, guest: Int) {
+    Canvas(modifier) {
+        val s=size.minDimension/100f
+        withTransform({ scale(s,s,Offset.Zero) }) {
+            drawCircle(Color(0xFFE7E9D9),50f,Offset(50f,50f))
+            drawOval(if(guest%2==0) Olive else Wine,Offset(18f,67f),Size(64f,48f))
+            drawOval(Color(0xFF3F3028),Offset(25f,17f),Size(50f,66f))
+            drawOval(Color(0xFFDCA87D),Offset(29f,29f),Size(42f,49f))
+            drawCircle(Color(0xFF3F3028),3f,Offset(40f,51f)); drawCircle(Color(0xFF3F3028),3f,Offset(60f,51f))
+            drawArc(Wine,10f,160f,false,Offset(42f,55f),Size(16f,10f),style=Stroke(2f))
+            drawCircle(Color.White,14f,Offset(33f,23f)); drawCircle(Color.White,17f,Offset(50f,17f)); drawCircle(Color.White,14f,Offset(67f,23f))
+            drawRoundRect(Color.White,Offset(29f,23f),Size(42f,13f),androidx.compose.ui.geometry.CornerRadius(3f))
+            drawLine(Gold,Offset(33f,31f),Offset(67f,31f),1.5f)
+            drawCircle(Gold,2f,Offset(50f,87f)); drawCircle(Gold,2f,Offset(50f,96f))
+        }
+    }
+}
