@@ -8,7 +8,7 @@ permissions:
 jobs:
   share:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     permissions:
       contents: write
       actions: read
@@ -18,8 +18,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh run download 41593067093 --name Android-emulator-video-and-screenshots --dir delivery
+          gh run watch 41596436188 --exit-status --interval 10
+          gh run download 41596436188 --name Android-emulator-video-and-screenshots --dir delivery
           VIDEO_PATH=$(find delivery -name mezze-gameplay.mp4 -type f -print -quit)
           test -n "$VIDEO_PATH"
           test -s "$VIDEO_PATH"
-          gh release create lebanese-mezze-demo-v1 "$VIDEO_PATH" --target d3a8770503c64d0bff2d9ddc80128ac2b0fa2850 --title "Lebanese Mezze - Gameplay Video" --notes "User-approved public MP4 from successful Android emulator test run 41593067093. Download mezze-gameplay.mp4 and upload it to YouTube for the exam."
+          gh release create lebanese-mezze-restaurant-v2 "$VIDEO_PATH" --target d743443cd4ecc395187e8d92e5564f12231081de --title "Lebanese Mezze - Restaurant Gameplay" --notes "User-approved public MP4 from successful Android emulator test run 41596436188. Download mezze-gameplay.mp4 and upload it to YouTube for the exam."
